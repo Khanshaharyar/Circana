@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circana — Automotive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="industry-automotive.css">
+    <link rel="stylesheet" href="industry-apparel.css">
+</head>
+<body>
+    <nav class="sidebar-rail">
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-expanded="false" aria-controls="drop-resources">
+            <i class="bi bi-layers"></i>
+            <span>Resources</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-expanded="false" aria-controls="drop-industries">
+            <i class="bi bi-basket"></i>
+            <span>Industries</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-expanded="false" aria-controls="drop-solutions">
+            <i class="bi bi-grid-3x3-gap"></i>
+            <span>Solutions</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-expanded="false" aria-controls="drop-company">
+            <i class="bi bi-house"></i>
+            <span>Company</span>
+        </button>
+    </nav>
+
+    <div id="sideAccordion" class="side-dropdown d-none d-md-block">
+        <div id="drop-resources" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Resources</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../Resources/blog.html" class="side-link">Blog</a>
+                <a href="../Resources/press-releases.html" class="side-link">Press Releases</a>
+                <a href="../Resources/media-coverage.html" class="side-link">Media Coverage</a>
+                <a href="../Resources/industry-rankings.html" class="side-link">Industry Rankings</a>
+                <a href="../Resources/case-studies.html" class="side-link">Case Studies</a>
+                <a href="../Resources/reports.html" class="side-link">Reports</a>
+            </div>
+        </div>
+        <div id="drop-industries" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Industries</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                
+                <a href="industry-alcoholic-beverages.html" class="side-link">Alcoholic Beverages</a>
+                <a href="industry-apparel.html" class="side-link">Apparel</a>
+                <a href="industry-appliances.html" class="side-link">Appliances</a>
+                <a href="industry-automotive.html" class="side-link">Automotive</a>
+                <a href="industry-b2b-technology.html" class="side-link">B2B Technology</a>
+                <a href="industry-beauty.html" class="side-link">Beauty</a>
+            </div>
+        </div>
+        <div id="drop-solutions" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Solutions</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../solutions/market.html" class="side-link">Market</a>
+                <a href="../solutions/consumer.html" class="side-link">Consumer</a>
+                <a href="../solutions/view-all.html" class="side-link">View All</a>
+            </div>
+        </div>
+        <div id="drop-company" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Company</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../company/growth_with_smith_2025.html" class="side-link">Growth with Smith 2025</a>
+                <a href="../company/company.html" class="side-link">Company</a>
+                <a href="../company/our-technology.html" class="side-link">Our Technology</a>
+                <a href="../company/our-behaviors.html" class="side-link">Our Behaviors</a>
+                <a href="../company/offices.html" class="side-link">Offices</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header class="top-nav fixed-top">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between" style="height:72px;">
+                    <a href="../index.html" class="brand d-inline-flex align-items-center text-decoration-none">
+                        <img src="../images/logos/logo.png" alt="Circana" class="brand-logo" >
+                    </a>
+                    <button class="nav-toggle d-lg-none icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="nav-actions d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-contact">Contact Us</a>
+                        <button class="icon-btn" aria-label="Language/Region">
+                            <i class="bi bi-globe2"></i>
+                        </button>
+                        <button class="icon-btn" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile nav (collapsible) -->
+        <div id="mobileNav" class="mobile-menu collapse d-lg-none">
+            <nav class="mobile-links">
+                <a href="#" class="mobile-link mobile-cta"><i class="bi bi-chat-left-text"></i><span>Contact Us</span></a>
+                
+                <!-- Resources with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-resources" aria-expanded="false" aria-controls="mobile-resources">
+                        <i class="bi bi-layers"></i><span>Resources</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-resources" class="collapse mobile-submenu">
+                        <a href="../Resources/blog.html" class="mobile-sublink">Blog</a>
+                        <a href="../Resources/press-releases.html" class="mobile-sublink">Press Releases</a>
+                        <a href="../Resources/media-coverage.html" class="mobile-sublink">Media Coverage</a>
+                        <a href="../Resources/industry-rankings.html" class="mobile-sublink">Industry Rankings</a>
+                        <a href="../Resources/case-studies.html" class="mobile-sublink">Case Studies</a>
+                        <a href="../Resources/reports.html" class="mobile-sublink">Reports</a>
+                    </div>
+                </div>
+                
+                <!-- Industries with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-industries" aria-expanded="false" aria-controls="mobile-industries">
+                        <i class="bi bi-basket"></i><span>Industries</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-industries" class="collapse mobile-submenu">
+                        <a href="industry-alcoholic-beverages.html" class="mobile-sublink">Alcoholic Beverages</a>
+                        <a href="industry-apparel.html" class="mobile-sublink">Apparel</a>
+                        <a href="industry-appliances.html" class="mobile-sublink">Appliances</a>
+                        <a href="industry-automotive.html" class="mobile-sublink">Automotive</a>
+                        <a href="industry-b2b-technology.html" class="mobile-sublink">B2B Technology</a>
+                        <a href="industry-beauty.html" class="mobile-sublink">Beauty</a>
+                    </div>
+                </div>
+                
+                <!-- Solutions with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-solutions" aria-expanded="false" aria-controls="mobile-solutions">
+                        <i class="bi bi-grid-3x3-gap"></i><span>Solutions</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-solutions" class="collapse mobile-submenu">
+                        <a href="../solutions/market.html" class="mobile-sublink">Market</a>
+                        <a href="../solutions/consumer.html" class="mobile-sublink">Consumer</a>
+                        <a href="../solutions/view-all.html" class="mobile-sublink">View All</a>
+                    </div>
+                </div>
+                
+                <!-- Company with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-company" aria-expanded="false" aria-controls="mobile-company">
+                        <i class="bi bi-house"></i><span>Company</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-company" class="collapse mobile-submenu">
+                        <a href="../company/growth_with_smith_2025.html" class="mobile-sublink">Growth with Smith 2025</a>
+                        <a href="../company/company.html" class="mobile-sublink">Company</a>
+                        <a href="../company/our-technology.html" class="mobile-sublink">Our Technology</a>
+                        <a href="../company/our-behaviors.html" class="mobile-sublink">Our Behaviors</a>
+                        <a href="../company/offices.html" class="mobile-sublink">Offices</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="mobile-social">
+                <a href="#" class="icon-btn" aria-label="Language/Region"><i class="bi bi-globe2"></i></a>
+                <a href="#" class="icon-btn" aria-label="Account"><i class="bi bi-person-circle"></i></a>
+            </div>
+        </div>
+
+        <section class="auto-hero">
+            <div class="auto-hero-content">
+                <div class="auto-hero-header">
+                    <div class="auto-hero-subtitle">The single source of truth for</div>
+                    <h1 class="auto-hero-title">Automotive</h1>
+                    <div class="auto-hero-description">
+                        Digital channels are quickly transforming the way people shop for cars and automotive aftermarket products. This creates new opportunities to engage with consumers in both online and brick-and-mortar channels.
+                    </div>
+                </div>
+
+                <div class="auto-content-box">
+                    <div class="auto-content-text">
+                        <h2 class="auto-content-heading">To win in this competitive and rapidly changing market, you need the broadest and deepest global view of the U.S. automotive aftermarket industry, based on our best-in-class point-of-sale (POS) and consumer data.</h2>
+                        <p class="auto-content-paragraph">We also offer analytic solutions such as new product forecasting, segmentation, price and promotion evaluation, market forecasting, and more. Our industry analysts leverage these unmatched data assets to provide data-driven perspective as you navigate the complexities of a changing market landscape.</p>
+                        <a href="#contact" class="auto-expert-btn">Speak to an Expert</a>
+                    </div>
+                    <div class="auto-content-image">
+                        <img src="../images/industry/11th.jpg" alt="Automotive aftermarket image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <!-- Clients and Partners Section -->
+        <section class="apparel-clients-section">
+            <div class="container">
+                <div class="apparel-clients-content">
+                    <div class="apparel-clients-text">
+                        <h2 class="apparel-clients-heading">Join more than 7,000 clients and partners worldwide</h2>
+                    </div>
+                    <div class="apparel-clients-logos">
+                        <div class="apparel-logo-item">
+                            <img src="../images/logos/one.svg" alt="McDonald's" />
+                        </div>
+                        <div class="apparel-logo-item">
+                            <img src="../images/logos/two.svg" alt="PepsiCo" />
+                        </div>
+                        <div class="apparel-logo-item">
+                            <img src="../images/logos/three.svg" alt="Unilever" />
+                        </div>
+                        <div class="apparel-logo-item">
+                            <img src="../images/logos/four.svg" alt="Sephora" />
+                        </div>
+                        <div class="apparel-logo-item">
+                            <img src="../images/logos/five.svg" alt="7-Eleven" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Experts Section -->
+        <section class="apparel-experts-section">
+            <div class="container">
+                <div class="apparel-experts-header">
+                    <div class="apparel-experts-subtitle">It all starts with our</div>
+                    <h2 class="apparel-experts-title">Industry Experts</h2>
+                </div>
+                
+                <div class="apparel-experts-content">
+                    <div class="apparel-expert-profile">
+                        <div class="apparel-expert-image-wrapper">
+                            <img src="../images/industry/Joe-Derochowski.jpg" class="apparel-expert-image" />
+                        </div>
+                        <h3 class="apparel-expert-name">Joe Derochowski</h3>
+                        <p class="apparel-expert-title">Vice President, Home and Home Improvement Industry Advisor</p>
+                        <div class="apparel-expert-buttons">
+                            <a href="#" class="apparel-expert-btn-outline">Get in Touch</a>
+                            <a href="#" class="apparel-expert-btn-outline">Expert Bio</a>
+                        </div>
+                    </div>
+                    
+                    <div class="apparel-expert-quote">
+                        <blockquote class="apparel-quote-text">
+                            “Investing in innovations that solve consumer needs will be critical for brands and retailers. Growing categories that demonstrate innovations that solve consumer pain and frustration, like multi-cookers, toaster ovens, egg makers, espresso makers, and the others, will continue to thrive through challenging economic times.”
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="auto-insights">
+            <div class="auto-insights-inner">
+                <div class="auto-insights-media">
+                    <img src="../images/industry/12th.jpg" alt="Light trails on highway representing speed and momentum">
+                </div>
+                <div class="auto-insights-body">
+                    <div class="auto-insights-date">5 Nov 2025</div>
+                    <h2 class="auto-insights-kicker">Insights in Action</h2>
+                    <a href="#" class="auto-insights-headline">Circana Unveils Winners of the Seventh Annual Automotive Aftermarket Performance Awards at AAPEX 2025</a>
+                    <p class="auto-insights-summary">The Automotive Aftermarket continues to demonstrate remarkable resilience in the face of economic headwinds. As consumer behaviors evolve, the brands recognized this year have shown exceptional agility and commitment — earning their place among the industry's top growth leaders.</p>
+                    <div class="auto-insights-actions">
+                        <a href="#" class="auto-btn-primary">Read More</a>
+                        <a href="#" class="auto-btn-chip">Industry Posts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <section class="auto-coverage">
+            <div class="auto-coverage-grid">
+                <article class="coverage-hero-card" aria-label="Automotive Aftermarket Industry Coverage">
+                    <div class="coverage-hero-media" style="--bg:url('https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1600&h=1200&fit=crop&q=80');"></div>
+                    <div class="coverage-hero-overlay"></div>
+                    <div class="coverage-hero-content">
+                        <h3 class="coverage-hero-title">Automotive Aftermarket</h3>
+                        <p class="coverage-hero-text">The automotive aftermarket has seen tremendous disruption and success due to changing driving and mobility patterns, especially in a postpandemic world. Retailers and brands need to understand market and consumer trends to respond and compete.</p>
+                        <a href="#" class="coverage-btn">Learn More</a>
+                    </div>
+                </article>
+
+                <article class="coverage-card" aria-label="Gasoline Consumption">
+                    <div class="coverage-card-inner">
+                        <div class="coverage-icon">
+                            <i class="bi bi-fuel-pump"></i>
+                        </div>
+                        <h4 class="coverage-title">Gasoline Consumption</h4>
+                        <p class="coverage-text">The U.S. motor fuels industry has changed tremendously over the last 20 years, as nontraditional retailers have entered the competitive landscape. We help our clients and retail partners understand consumer mindset around gasoline purchase behaviors.</p>
+                        <a href="#" class="coverage-small-btn">Learn More</a>
+                    </div>
+                </article>
+
+                <article class="coverage-card" aria-label="Replacement Tires">
+                    <div class="coverage-card-inner">
+                        <div class="coverage-icon">
+                            <i class="bi bi-life-preserver"></i>
+                        </div>
+                        <h4 class="coverage-title">Replacement Tires</h4>
+                        <p class="coverage-text">The replacement tires market is in a constant state of change due to an ever-evolving macro landscape. Now more than ever, the tires industry needs granular item and market-level data to understand trends and pivot in response.</p>
+                        <a href="#" class="coverage-small-btn">Learn More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="auto-solutions">
+            <div class="solutions-header">Featured Solutions</div>
+            <div class="solutions-grid">
+                <article class="solution-card">
+                    <div class="solution-media">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=520&fit=crop&q=80" alt="People by the beach representing consumers">
+                    </div>
+                    <div class="solution-body">
+                        <div class="solution-eyebrow">Solution</div>
+                        <h3 class="solution-title">Complete Consumer</h3>
+                        <p class="solution-desc">Complete Consumer™ solution gives a 360° view of U.S. buyers by tracking purchases across channels, powered by POS-aligned panel insights.</p>
+                    </div>
+                </article>
+
+                <article class="solution-card">
+                    <div class="solution-media">
+                        <img src="../images/industry/5th.jpg" alt="Sale signage in a store window">
+                    </div>
+                    <div class="solution-body">
+                        <div class="solution-eyebrow">Solution</div>
+                        <h3 class="solution-title">Complete Market</h3>
+                        <p class="solution-desc">Complete Market™ provides robust POS measurement for in-store and online sales, with fulfillment type breaks and UPC details across CPG.</p>
+                    </div>
+                </article>
+
+                <article class="solution-card">
+                    <div class="solution-media">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=520&fit=crop&q=80" alt="Team collaborating around a laptop">
+                    </div>
+                    <div class="solution-body">
+                        <div class="solution-eyebrow">Solution</div>
+                        <h3 class="solution-title">Marketing Mix</h3>
+                        <p class="solution-desc">Marketing Mix solutions reveal incremental impact, quantify uncertainty, and optimize ROI levers for confident budgeting.</p>
+                    </div>
+                </article>
+
+                <article class="solution-card solution-promo">
+                    <div class="solution-media">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=520&fit=crop&q=80" alt="Person researching on a laptop in a library">
+                    </div>
+                    <div class="promo-overlay">
+                        <div class="promo-copy">
+                            <div class="promo-text">Not sure? Let us match you to a Solution.</div>
+                            <a href="#" class="solution-start-btn">Get Started</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="solutions-help">
+                <span>Can't find what you're looking for?</span>
+                <a href="#">We can help.</a>
+            </div>
+        </section>
+
+        <section class="auto-related">
+            <div class="related-header">Related Articles</div>
+            <div class="related-grid">
+                <article class="related-item">
+                    <a href="#" class="related-thumb">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=480&h=320&fit=crop&q=80" alt="Grocery basket with fruits">
+                    </a>
+                    <div class="related-meta">
+                        <div class="related-date">5 Nov 2025</div>
+                        <a href="#" class="related-title">How Is Consumer Panel Data Collected?</a>
+                    </div>
+                </article>
+
+                <article class="related-item">
+                    <a href="#" class="related-thumb">
+                        <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=480&h=320&fit=crop&q=80" alt="Team working in retail store">
+                    </a>
+                    <div class="related-meta">
+                        <div class="related-date">5 Nov 2025</div>
+                        <a href="#" class="related-title">Understanding Market Share and Tracking It Accurately</a>
+                    </div>
+                </article>
+
+                <article class="related-item">
+                    <a href="#" class="related-thumb">
+                        <img src="../images/industry/3rd.jpg" alt="Friends shopping outdoors">
+                    </a>
+                    <div class="related-meta">
+                        <div class="related-date">5 Nov 2025</div>
+                        <a href="#" class="related-title">A Complete Guide to Consumer Behavior Data: What It Is and How to Use It</a>
+                    </div>
+                </article>
+            </div>
+            <div class="related-footer">
+                <a href="#" class="related-all">View all articles</a>
+            </div>
+        </section>
+        <!-- Speak to an expert Section -->
+        <section class="contact-expert">
+            <div class="container">
+                <div class="contact-expert-grid">
+                    <!-- Left: Form -->
+                    <div class="contact-card">
+                        <h2 class="contact-title">Speak to an expert</h2>
+                        <p class="contact-lead">Find out how we can help your brand grow more. Fill out the form and we
+                            will get right back to you.</p>
+                        <form class="contact-form" action="#" method="post" novalidate>
+                            <input type="text" class="form-field" placeholder="First name*">
+                            <input type="text" class="form-field" placeholder="Last name*">
+                            <input type="email" class="form-field" placeholder="Email*">
+                            <input type="tel" class="form-field" placeholder="Phone number">
+                            <input type="text" class="form-field" placeholder="Company name*">
+                            <input type="text" class="form-field" placeholder="Job title*">
+                            <select class="form-field">
+                                <option>Role*</option>
+                            </select>
+                            <select class="form-field">
+                                <option>Department*</option>
+                            </select>
+                            <select class="form-field">
+                                <option>Industry*</option>
+                            </select>
+                            <select class="form-field">
+                                <option>Solution area of interest</option>
+                            </select>
+                            <select class="form-field">
+                                <option>Market*</option>
+                            </select>
+                            <textarea class="form-field form-textarea" rows="4" placeholder="Message"></textarea>
+                            <div class="captcha-row">
+                                <button type="submit" class="contact-submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Right: Image -->
+                    <div class="contact-image">
+                        <img src="../images/industry/13th.jpg" alt="Modern kitchen counter with appliance">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="footer-brand">
+                            <img src="../images/logos/logo.png" alt="Circana" class="footer-logo" >
+                            <p class="footer-tag">Complexity into Clarity.</p>
+                            <p class="footer-copy">Circana transforms complexity into clarity with the most complete view of the consumer, inspiring actions that unlock business growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Insights</h5>
+                        <ul class="footer-list">
+                            <li><a href="../Resources/industry-rankings.html">Industry Rankings</a></li>
+                            <li><a href="../Resources/blog.html">Blog</a></li>
+                            <li><a href="../Resources/press-releases.html">Press Releases</a></li>
+                            <li><a href="#">Podcasts</a></li>
+                            <li><a href="../Resources/media-coverage.html">Media Coverage</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Entertainment Monthly Insights</a></li>
+                            <li><a href="#">Product Training</a></li>
+                            <li><a href="../Resources/reports.html">Reports</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Solutions</h5>
+                        <a href="#" class="selector-btn">Solution Selector</a>
+                        <ul class="footer-list mt-2">
+                            <li><a href="#">Measure Demand</a></li>
+                            <li><a href="#">Accelerate Demand</a></li>
+                        </ul>
+                        <h6 class="footer-sub mt-4">NCSolutions is now part of Circana</h6>
+                        <ul class="footer-list small">
+                            <li><a href="#">Services Privacy Statement</a></li>
+                            <li><a href="#">California Privacy Statement</a></li>
+                            <li><a href="#">Do Not Sell My Information</a></li>
+                            <li><a href="#">Request for Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Who we are</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Growth Summit 2025</a></li>
+                            <li><a href="#">Our Behaviors</a></li>
+                            <li><a href="#">Culture of Inclusion and Belonging</a></li>
+                            <li><a href="#">Philanthropy</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Offices</a></li>
+                        </ul>
+                        <h5 class="footer-title mt-3">Careers at Circana</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Circana Careers</a></li>
+                            <li><a href="#">Job Openings</a></li>
+                            <li><a href="#">Fraud Alert</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© <span id="year"></span> Circana. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Close all dropdowns on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Close all open dropdowns
+            const allCollapses = document.querySelectorAll('#sideAccordion .collapse');
+            allCollapses.forEach(function(collapse) {
+                if (collapse.classList.contains('show')) {
+                    const bsCollapse = bootstrap.Collapse.getInstance(collapse) || new bootstrap.Collapse(collapse);
+                    bsCollapse.hide();
+                }
+            });
+            
+            // Close dropdown when any side-link is clicked
+            const sideLinks = document.querySelectorAll('.side-link');
+            sideLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    const collapseElement = this.closest('.collapse');
+                    if (collapseElement) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(collapseElement) || new bootstrap.Collapse(collapseElement);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

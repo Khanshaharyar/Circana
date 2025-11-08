@@ -1,0 +1,206 @@
+/* Industry Rankings hero styles */
+
+.ir-hero {
+    position: relative;
+    margin: 80px 16px 60px 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: radial-gradient(60% 80% at 50% 40%, rgba(123, 31, 162, 0.35), rgba(0, 0, 0, 0.65)), url('../images//industry-ranking.jpg') center/cover no-repeat;
+}
+
+.ir-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.ir-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.ir-hero-inner {
+    padding: 80px 0 120px 0;
+    color: #fff;
+}
+
+.ir-icon span {
+    font-size: 28px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.ir-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(36px, 6vw, 65px);
+    margin: 0 0 8px 0;
+}
+
+.ir-sub {
+    max-width: 980px;
+    margin: 0 auto 24px auto;
+    font-size: clamp(16px, 2vw, 18px);
+    opacity: 0.95;
+}
+
+.ir-select-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.ir-dropdown {
+    position: relative;
+    max-width: 420px;
+    width: 100%;
+}
+
+.ir-dropdown-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-height: 320px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+    z-index: 1000;
+    padding: 8px 0;
+}
+
+.ir-dropdown.active .ir-dropdown-list {
+    display: block;
+}
+
+.ir-dropdown-item {
+    display: block;
+    padding: 12px 18px;
+    color: #2b1b3b;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.ir-dropdown-item:hover,
+.ir-dropdown-item.selected {
+    background-color: #f3ecff;
+    color: #2b1b3b;
+}
+
+.ir-dropdown-trigger {
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #6a1b9a;
+    font-weight: 700;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.ir-dropdown-trigger:hover {
+    background: #eeeeee;
+}
+
+.ir-dropdown-trigger i {
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.ir-dropdown.active .ir-dropdown-trigger i {
+    transform: rotate(180deg);
+}
+
+.ir-trigger-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* Custom scrollbar */
+.ir-dropdown-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ir-dropdown-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.ir-dropdown-list::-webkit-scrollbar-thumb {
+    background: #c5bddc;
+    border-radius: 10px;
+}
+
+.ir-dropdown-list::-webkit-scrollbar-thumb:hover {
+    background: #9c8fb8;
+}
+
+.ir-powered {
+    margin-top: 12px;
+    opacity: 0.9;
+}
+
+@media (max-width: 991.98px) {
+    .ir-hero {
+        margin: 80px 8px 60px 8px;
+    }
+    
+    .ir-hero-inner {
+        padding: 70px 0 100px 0;
+    }
+    
+    .ir-title {
+        font-size: clamp(32px, 5vw, 56px);
+    }
+}
+
+@media (max-width: 768px) {
+    .ir-hero {
+        margin: 72px 0 50px 0;
+        border-radius: 0;
+    }
+    
+    .ir-hero-inner {
+        padding: 60px 0 70px 0;
+    }
+    
+    .ir-title {
+        font-size: clamp(28px, 6vw, 48px);
+    }
+    
+    .ir-sub {
+        font-size: clamp(14px, 3vw, 16px);
+        padding: 0 1rem;
+    }
+    
+    .ir-dropdown {
+        max-width: 100%;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .ir-hero-inner {
+        padding: 50px 0 60px 0;
+    }
+    
+    .ir-title {
+        font-size: clamp(24px, 7vw, 40px);
+    }
+    
+    .ir-dropdown-trigger {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+}

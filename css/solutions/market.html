@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circana — Market Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="market.css">
+</head>
+<body>
+    <!-- Fixed Sidebar (Resources, Industries, Solutions, Company) -->
+    <nav class="sidebar-rail">
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-expanded="false" aria-controls="drop-resources">
+            <i class="bi bi-layers"></i>
+            <span>Resources</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-expanded="false" aria-controls="drop-industries">
+            <i class="bi bi-basket"></i>
+            <span>Industries</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-expanded="false" aria-controls="drop-solutions">
+            <i class="bi bi-grid-3x3-gap"></i>
+            <span>Solutions</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-expanded="false" aria-controls="drop-company">
+            <i class="bi bi-house"></i>
+            <span>Company</span>
+        </button>
+    </nav>
+
+    <!-- Left flyout dropdown panels -->
+    <div id="sideAccordion" class="side-dropdown d-none d-md-block">
+        <div id="drop-resources" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Resources</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../Resources/blog.html" class="side-link">Blog</a>
+                <a href="../Resources/press-releases.html" class="side-link">Press Releases</a>
+                <a href="../Resources/media-coverage.html" class="side-link">Media Coverage</a>
+                <a href="../Resources/industry-rankings.html" class="side-link">Industry Rankings</a>
+                <a href="../Resources/case-studies.html" class="side-link">Case Studies</a>
+                <a href="../Resources/reports.html" class="side-link">Reports</a>
+            </div>
+        </div>
+        <div id="drop-industries" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Industries</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../industries/industry-alcoholic-beverages.html" class="side-link">Alcoholic Beverages</a>
+                <a href="../industries/industry-apparel.html" class="side-link">Apparel</a>
+                <a href="../industries/industry-appliances.html" class="side-link">Appliances</a>
+                <a href="../industries/industry-automotive.html" class="side-link">Automotive</a>
+                <a href="../industries/industry-b2b-technology.html" class="side-link">B2B Technology</a>
+                <a href="../industries/industry-beauty.html" class="side-link">Beauty</a>
+            </div>
+        </div>
+        <div id="drop-solutions" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Solutions</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="market.html" class="side-link">Market</a>
+                <a href="consumer.html" class="side-link">Consumer</a>
+                <a href="view-all.html" class="side-link">View All</a>
+            </div>
+        </div>
+        <div id="drop-company" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Company</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../company/growth_with_smith_2025.html" class="side-link">Growth with Smith 2025</a>
+                <a href="../company/company.html" class="side-link">Company</a>
+                <a href="../company/our-technology.html" class="side-link">Our Technology</a>
+                <a href="../company/our-behaviors.html" class="side-link">Our Behaviors</a>
+                <a href="../company/offices.html" class="side-link">Offices</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header class="top-nav fixed-top">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between" style="height:72px;">
+                    <a href="../index.html" class="brand d-inline-flex align-items-center text-decoration-none">
+                        <img src="../images/logos/logo.png" alt="Circana" class="brand-logo" >
+                    </a>
+
+                    <button class="nav-toggle d-lg-none icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <div class="nav-search d-none d-md-flex align-items-center flex-grow-1">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <input type="text" class="form-control nav-search-input" placeholder="Search" aria-label="Search">
+                    </div>
+
+                    <div class="nav-actions d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-contact">Contact Us</a>
+                        <button class="icon-btn" aria-label="Language/Region">
+                            <i class="bi bi-globe2"></i>
+                        </button>
+                        <button class="icon-btn" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile nav (collapsible) -->
+        <div id="mobileNav" class="mobile-menu collapse d-lg-none">
+            <nav class="mobile-links">
+                <a href="#" class="mobile-link mobile-cta"><i class="bi bi-chat-left-text"></i><span>Contact Us</span></a>
+                
+                <!-- Resources with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-resources" aria-expanded="false" aria-controls="mobile-resources">
+                        <i class="bi bi-layers"></i><span>Resources</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-resources" class="collapse mobile-submenu">
+                        <a href="../Resources/blog.html" class="mobile-sublink">Blog</a>
+                        <a href="../Resources/press-releases.html" class="mobile-sublink">Press Releases</a>
+                        <a href="../Resources/media-coverage.html" class="mobile-sublink">Media Coverage</a>
+                        <a href="../Resources/industry-rankings.html" class="mobile-sublink">Industry Rankings</a>
+                        <a href="../Resources/case-studies.html" class="mobile-sublink">Case Studies</a>
+                        <a href="../Resources/reports.html" class="mobile-sublink">Reports</a>
+                    </div>
+                </div>
+                
+                <!-- Industries with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-industries" aria-expanded="false" aria-controls="mobile-industries">
+                        <i class="bi bi-basket"></i><span>Industries</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-industries" class="collapse mobile-submenu">
+                        <a href="../industries/industry-alcoholic-beverages.html" class="mobile-sublink">Alcoholic Beverages</a>
+                        <a href="../industries/industry-apparel.html" class="mobile-sublink">Apparel</a>
+                        <a href="../industries/industry-appliances.html" class="mobile-sublink">Appliances</a>
+                        <a href="../industries/industry-automotive.html" class="mobile-sublink">Automotive</a>
+                        <a href="../industries/industry-b2b-technology.html" class="mobile-sublink">B2B Technology</a>
+                        <a href="../industries/industry-beauty.html" class="mobile-sublink">Beauty</a>
+                    </div>
+                </div>
+                
+                <!-- Solutions with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-solutions" aria-expanded="false" aria-controls="mobile-solutions">
+                        <i class="bi bi-grid-3x3-gap"></i><span>Solutions</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-solutions" class="collapse mobile-submenu">
+                        <a href="market.html" class="mobile-sublink">Market</a>
+                        <a href="consumer.html" class="mobile-sublink">Consumer</a>
+                        <a href="view-all.html" class="mobile-sublink">View All</a>
+                    </div>
+                </div>
+                
+                <!-- Company with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-company" aria-expanded="false" aria-controls="mobile-company">
+                        <i class="bi bi-house"></i><span>Company</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-company" class="collapse mobile-submenu">
+                        <a href="../company/growth_with_smith_2025.html" class="mobile-sublink">Growth with Smith 2025</a>
+                        <a href="../company/company.html" class="mobile-sublink">Company</a>
+                        <a href="../company/our-technology.html" class="mobile-sublink">Our Technology</a>
+                        <a href="../company/our-behaviors.html" class="mobile-sublink">Our Behaviors</a>
+                        <a href="../company/offices.html" class="mobile-sublink">Offices</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="mobile-social">
+                <a href="#" class="icon-btn" aria-label="Language/Region"><i class="bi bi-globe2"></i></a>
+                <a href="#" class="icon-btn" aria-label="Account"><i class="bi bi-person-circle"></i></a>
+            </div>
+        </div>
+
+        <!-- Market Section -->
+        <section class="market-section" style="margin-top: 72px;">
+            <div class="container-fluid px-0">
+                <div class="row g-0">
+                    <!-- Image Column -->
+                    <div class="col-lg-6">
+                        <div class="market-image-wrapper">
+                            <img src="../images/solution/1st.jpg" alt="Market analysis" class="market-image">
+                        </div>
+                    </div>
+                    
+                    <!-- Content Column -->
+                    <div class="col-lg-6">
+                        <div class="market-content">
+                            <h1 class="market-heading">Market</h1>
+                            <h2 class="market-subheading">An unrivaled view of the truth.</h2>
+                            <p class="market-description">
+                                Track and diagnose sales performance with the most comprehensive measurement of in-store and online sales.
+                            </p>
+                            
+                            <ul class="market-features">
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Access market truth with industry-leading, census-based POS data</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Measure market size and share across 26 industries and 2,000 categories</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Navigate market complexity with clear channel splits aligned to the largest POS truth set</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Decompose sources of growth, including e-commerce, at the account level</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="#" class="market-demo-btn">Book a Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Client Logos Section -->
+                <div class="market-clients">
+                    <p class="market-clients-intro">Join more than 7,000 clients and partners worldwide</p>
+                    <div class="market-clients-logos">
+                        <div class="client-logo">
+                            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <text x="10" y="25" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1a1a1a">7-ELEVEN</text>
+                            </svg>
+                        </div>
+                        <div class="client-logo">
+                            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 10 L20 30 L40 20 Z" fill="#1a1a1a"/>
+                                <text x="45" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">McDonald's</text>
+                            </svg>
+                        </div>
+                        <div class="client-logo">
+                            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="12" fill="#1a1a1a"/>
+                                <text x="35" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a1a1a">PEPSICO</text>
+                            </svg>
+                        </div>
+                        <div class="client-logo">
+                            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <text x="10" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1a1a1a">SEPHORA</text>
+                            </svg>
+                        </div>
+                        <div class="client-logo">
+                            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <text x="10" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">Unilever</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Circana Section -->
+        <section class="why-circana-section">
+            <div class="container">
+                <h2 class="why-circana-heading">Why Circana</h2>
+                <div class="row g-4">
+                    <!-- Card 1: Enhanced Clarity -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="why-circana-card">
+                            <div class="why-circana-icon">
+                                <i class="bi bi-arrow-repeat"></i>
+                            </div>
+                            <h3 class="why-circana-card-title">Enhanced Clarity</h3>
+                            <p class="why-circana-card-description">
+                                Achieve deeper market understanding and discover a more prescriptive path to ROI with comprehensive market insights, delivered in custom views, tailored to your needs. Benefit from uniform data granularity and the ability to load custom attributes and hierarchies, empowering you to strategize more effectively.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2: Simplified Ways of Working -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="why-circana-card">
+                            <div class="why-circana-icon">
+                                <i class="bi bi-diagram-3"></i>
+                            </div>
+                            <h3 class="why-circana-card-title">Simplified Ways of Working</h3>
+                            <p class="why-circana-card-description">
+                                Unlock greater clarity and confidence in your omnichannel strategy with a solution that automatically delivers deduplicated and additive channel views built on a robust, POS-based foundation, all in one place. This streamlined functionality enables more efficient and effective channel analysis.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3: Deeper Insights -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="why-circana-card">
+                            <div class="why-circana-icon">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <h3 class="why-circana-card-title">Deeper Insights</h3>
+                            <p class="why-circana-card-description">
+                                Gain a competitive edge with comprehensive omnichannel coverage across all major e-commerce and brick-and-mortar retailers. Using 91% of CPG dollars sourced from census POS—the closest thing to complete market truth available today—you can make informed decisions and navigate the complexities of omnichannel data.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="container">
+                <div class="video-wrapper">
+                    <div class="video-poster">
+                        <video id="marketVideo" class="video-element" autoplay muted loop preload="auto">
+                            <source src="../images/Market Share Measurement & Industry Analysis.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay" id="videoOverlay">
+                            <h2 class="video-text-overlay">in more categories</h2>
+                            <button class="video-play-btn" id="playVideoBtn" aria-label="Play video">
+                                <i class="bi bi-pause-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Enhancements Section -->
+        <section class="featured-enhancements-section">
+            <div class="container">
+                <h2 class="featured-enhancements-heading">Featured Enhancements</h2>
+                <div class="row align-items-center">
+                    <!-- Text Content Column -->
+                    <div class="col-lg-6">
+                        <div class="featured-enhancements-content">
+                            <h3 class="featured-enhancements-title">Store Audit</h3>
+                            <p class="featured-enhancements-description">
+                                Circana's Store Audit solution integrates AI-enabled image recognition with industry leading point-of-sale (POS) data to quickly turn the physical store into insights, making your analysis faster and more accurate than ever before.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Image Column -->
+                    <div class="col-lg-6">
+                        <div class="featured-enhancements-image-wrapper">
+                            <img src="../images/solution/2nd.jpg" alt="Store Audit - Shopping in supermarket" class="featured-enhancements-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Case Studies Section -->
+        <section class="market-case-studies-section">
+            <div class="container">
+                <h2 class="market-case-studies-heading">Market Case Studies</h2>
+                <div class="text-center mb-5">
+                    <a href="#" class="market-case-studies-view-all">View All</a>
+                </div>
+                
+                <div class="row">
+                    <!-- Left Column - Visual Case Study Cards -->
+                    <div class="col-lg-6">
+                        <!-- Card 1 -->
+                        <div class="case-study-card">
+                            <div class="case-study-image-wrapper">
+                                <img src="../images/solution/3rd.jpg" alt="Ice cream sales case study" class="case-study-image">
+                            </div>
+                            <h3 class="case-study-title">Scooping Up Ice Cream Sales: A Data-driven Win for Retailer and Brand</h3>
+                            <div class="case-study-tags">
+                                <span>CPG</span>
+                                <span class="tag-divider">|</span>
+                                <span>Liquid Data Collaborate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-divider"></div>
+                        
+                        <!-- Card 2 -->
+                        <div class="case-study-card">
+                            <div class="case-study-image-wrapper">
+                                <img src="../images/solution/4th.jpg" alt="Loyalty panel insights" class="case-study-image">
+                            </div>
+                            <h3 class="case-study-title">Loyalty panel insights support 5% incremental growth</h3>
+                            <div class="case-study-tags">
+                                <span>Food and Beverage</span>
+                                <span class="tag-divider">|</span>
+                                <span>Complete Food & Beverage</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Text-Only Case Study Summaries -->
+                    <div class="col-lg-6">
+                        <!-- Summary 1 -->
+                        <div class="case-study-summary">
+                            <h3 class="case-study-title">Sales grow 10% with marketing mix and media optimization adjustments</h3>
+                            <p class="case-study-description">
+                                A food manufacturer wanted to understand the impact of its advertising performance. The brand requested an annual and mid-year...
+                            </p>
+                            <div class="case-study-tags">
+                                <span>Food and Beverage</span>
+                                <span class="tag-divider">|</span>
+                                <span>Marketing Mix and Lift</span>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-divider"></div>
+                        
+                        <!-- Summary 2 -->
+                        <div class="case-study-summary">
+                            <h3 class="case-study-title">Improved on-shelf presence, growing the brand and category</h3>
+                            <p class="case-study-description">
+                                A major food and beverage manufacturer set a goal to increase its shelf share at a major retailer. To do this, the manufacturer needed...
+                            </p>
+                            <div class="case-study-tags">
+                                <span>Food and Beverage</span>
+                                <span class="tag-divider">|</span>
+                                <span>Complete Food & Beverage</span>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-divider"></div>
+                        
+                        <!-- Summary 3 -->
+                        <div class="case-study-summary">
+                            <h3 class="case-study-title">Growing your business with limited time offers (LTOs)</h3>
+                            <p class="case-study-description">
+                                Innovation doesn't always demand a revolutionary concept; sometimes, simplicity prevails. Chipotle introduced the Chicken al...
+                            </p>
+                            <div class="case-study-tags">
+                                <span>Food and Beverage</span>
+                                <span class="tag-divider">|</span>
+                                <span>Complete Food & Beverage</span>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-divider"></div>
+                        
+                        <!-- Summary 4 -->
+                        <div class="case-study-summary">
+                            <h3 class="case-study-title">Optimizing product placement for maximum visibility</h3>
+                            <p class="case-study-description">
+                                Understanding shelf placement impact on sales performance helps brands make strategic decisions about product positioning...
+                            </p>
+                            <div class="case-study-tags">
+                                <span>CPG</span>
+                                <span class="tag-divider">|</span>
+                                <span>Store Audit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Insights Section -->
+        <section class="market-insights-section">
+            <div class="container">
+                <h2 class="market-insights-heading">Read More Market Insights</h2>
+                <div class="row g-4">
+                    <!-- Article Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="insight-article-card">
+                            <div class="insight-article-image-wrapper">
+                                <img src="../images/solution/5th.jpg" alt="Healthy behaviors influencing trends" class="insight-article-image">
+                            </div>
+                            <div class="insight-article-content">
+                                <h3 class="insight-article-title">Healthy Behaviors Influencing Trends Across U.S. Food and Beverage</h3>
+                                <div class="insight-article-meta">
+                                    <span class="insight-article-date">29 Oct 2024</span>
+                                    <span class="meta-divider">|</span>
+                                    <span class="insight-article-category">Infographics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Article Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="insight-article-card">
+                            <div class="insight-article-image-wrapper">
+                                <img src="../images/solution/6th.jpg" alt="U.S. C-store landscape" class="insight-article-image">
+                            </div>
+                            <div class="insight-article-content">
+                                <h3 class="insight-article-title">U.S. C-store Landscape Q1 2024</h3>
+                                <div class="insight-article-meta">
+                                    <span class="insight-article-date">10 Jul 2025</span>
+                                    <span class="meta-divider">|</span>
+                                    <span class="insight-article-category">Reports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Article Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="insight-article-card">
+                            <div class="insight-article-image-wrapper">
+                                <img src="../images/solution/7th.jpg" alt="An unnecessary compromise" class="insight-article-image">
+                            </div>
+                            <div class="insight-article-content">
+                                <h3 class="insight-article-title">An Unnecessary Compromise</h3>
+                                <div class="insight-article-meta">
+                                    <span class="insight-article-date">25 Jun 2024</span>
+                                    <span class="meta-divider">|</span>
+                                    <span class="insight-article-category">Blog</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="market-insights-view-all-wrapper">
+                    <a href="#" class="market-insights-view-all">View all articles</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="footer-brand">
+                            <img src="../images/logos/logo.png" alt="Circana" class="footer-logo" >
+                            <p class="footer-tag">Complexity into Clarity.</p>
+                            <p class="footer-copy">Circana transforms complexity into clarity with the most complete view of the consumer, inspiring actions that unlock business growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Insights</h5>
+                        <ul class="footer-list">
+                            <li><a href="../Resources/industry-rankings.html">Industry Rankings</a></li>
+                            <li><a href="../Resources/blog.html">Blog</a></li>
+                            <li><a href="../Resources/press-releases.html">Press Releases</a></li>
+                            <li><a href="#">Podcasts</a></li>
+                            <li><a href="../Resources/media-coverage.html">Media Coverage</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Entertainment Monthly Insights</a></li>
+                            <li><a href="#">Product Training</a></li>
+                            <li><a href="../Resources/reports.html">Reports</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Solutions</h5>
+                        <a href="#" class="selector-btn">Solution Selector</a>
+                        <ul class="footer-list mt-2">
+                            <li><a href="market.html">Market</a></li>
+                            <li><a href="consumer.html">Consumer</a></li>
+                            <li><a href="view-all.html">View All</a></li>
+                        </ul>
+                        <h6 class="footer-sub mt-4">NCSolutions is now part of Circana</h6>
+                        <ul class="footer-list small">
+                            <li><a href="#">Services Privacy Statement</a></li>
+                            <li><a href="#">California Privacy Statement</a></li>
+                            <li><a href="#">Do Not Sell My Information</a></li>
+                            <li><a href="#">Request for Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Who we are</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Growth Summit 2025</a></li>
+                            <li><a href="#">Our Behaviors</a></li>
+                            <li><a href="#">Culture of Inclusion and Belonging</a></li>
+                            <li><a href="#">Philanthropy</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Offices</a></li>
+                        </ul>
+                        <h5 class="footer-title mt-3">Careers at Circana</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Circana Careers</a></li>
+                            <li><a href="#">Job Openings</a></li>
+                            <li><a href="#">Fraud Alert</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© <span id="year"></span> Circana. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Close dropdown when any side-link is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideLinks = document.querySelectorAll('.side-link');
+            sideLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    // Find the parent collapse element and close it
+                    const collapseElement = this.closest('.collapse');
+                    if (collapseElement) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(collapseElement) || new bootstrap.Collapse(collapseElement);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+            
+            // Video play/pause functionality
+            const video = document.getElementById('marketVideo');
+            const playBtn = document.getElementById('playVideoBtn');
+            const overlay = document.getElementById('videoOverlay');
+            
+            if (video && playBtn && overlay) {
+                // Hide overlay initially since video autoplays
+                overlay.classList.add('hidden');
+                
+                // Play/Pause button click handler
+                playBtn.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                        video.muted = false; // Unmute when user clicks play
+                        overlay.classList.add('hidden');
+                        playBtn.querySelector('i').classList.remove('bi-play-fill');
+                        playBtn.querySelector('i').classList.add('bi-pause-fill');
+                    } else {
+                        video.pause();
+                        overlay.classList.remove('hidden');
+                        playBtn.querySelector('i').classList.remove('bi-pause-fill');
+                        playBtn.querySelector('i').classList.add('bi-play-fill');
+                    }
+                });
+                
+                // Show overlay when video is paused
+                video.addEventListener('pause', function() {
+                    overlay.classList.remove('hidden');
+                    playBtn.querySelector('i').classList.remove('bi-pause-fill');
+                    playBtn.querySelector('i').classList.add('bi-play-fill');
+                });
+                
+                // Hide overlay when video plays
+                video.addEventListener('play', function() {
+                    overlay.classList.add('hidden');
+                    playBtn.querySelector('i').classList.remove('bi-play-fill');
+                    playBtn.querySelector('i').classList.add('bi-pause-fill');
+                });
+                
+                // Show overlay when video ends (if not looping)
+                video.addEventListener('ended', function() {
+                    if (!video.loop) {
+                        overlay.classList.remove('hidden');
+                        playBtn.querySelector('i').classList.remove('bi-pause-fill');
+                        playBtn.querySelector('i').classList.add('bi-play-fill');
+                    }
+                });
+                
+                // Add controls to video
+                video.setAttribute('controls', 'controls');
+            }
+        });
+    </script>
+</body>
+</html>
+

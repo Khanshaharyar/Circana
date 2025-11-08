@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circana — Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <!-- Fixed Sidebar (Resources, Industries, Solutions, Company) -->
+    <nav class="sidebar-rail">
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-expanded="false" aria-controls="drop-resources">
+            <i class="bi bi-layers"></i>
+            <span>Resources</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-expanded="false" aria-controls="drop-industries">
+            <i class="bi bi-basket"></i>
+            <span>Industries</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-expanded="false" aria-controls="drop-solutions">
+            <i class="bi bi-grid-3x3-gap"></i>
+            <span>Solutions</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-expanded="false" aria-controls="drop-company">
+            <i class="bi bi-house"></i>
+            <span>Company</span>
+        </button>
+    </nav>
+
+    <!-- Left flyout dropdown panels -->
+    <div id="sideAccordion" class="side-dropdown d-none d-md-block">
+        <div id="drop-resources" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Resources</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="blog.html" class="side-link">Blog</a>
+                <a href="press-releases.html" class="side-link">Press Releases</a>
+                <a href="media-coverage.html" class="side-link">Media Coverage</a>
+                <a href="industry-rankings.html" class="side-link">Industry Rankings</a>
+                <a href="case-studies.html" class="side-link">Case Studies</a>
+                <a href="reports.html" class="side-link">Reports</a>
+            </div>
+        </div>
+        <div id="drop-industries" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Industries</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../industries/industry-alcoholic-beverages.html" class="side-link">Alcoholic Beverages</a>
+                <a href="../industries/industry-apparel.html" class="side-link">Apparel</a>
+                <a href="../industries/industry-appliances.html" class="side-link">Appliances</a>
+                <a href="../industries/industry-automotive.html" class="side-link">Automotive</a>
+                <a href="../industries/industry-b2b-technology.html" class="side-link">B2B Technology</a>
+                <a href="../industries/industry-beauty.html" class="side-link">Beauty</a>
+            </div>
+        </div>
+        <div id="drop-solutions" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Solutions</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../solutions/market.html" class="side-link">Market</a>
+                <a href="../solutions/consumer.html" class="side-link">Consumer</a>
+                <a href="../solutions/view-all.html" class="side-link">View All</a>
+            </div>
+        </div>
+        <div id="drop-company" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Company</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../company/growth_with_smith_2025.html" class="side-link">Growth with Smith 2025</a>
+                <a href="../company/company.html" class="side-link">Company</a>
+                <a href="../company/our-technology.html" class="side-link">Our Technology</a>
+                <a href="../company/our-behaviors.html" class="side-link">Our Behaviors</a>
+                <a href="../company/offices.html" class="side-link">Offices</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header class="top-nav fixed-top">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between" style="height:72px;">
+                    <a href="../index.html" class="brand d-inline-flex align-items-center text-decoration-none">
+                        <img src="../images/logos/logo.png" alt="Circana" class="brand-logo" >
+                    </a>
+
+                    <button class="nav-toggle d-lg-none icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <div class="nav-search d-none d-md-flex align-items-center flex-grow-1">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <input type="text" class="form-control nav-search-input" placeholder="Search" aria-label="Search">
+                    </div>
+
+                    <div class="nav-actions d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-contact">Contact Us</a>
+                        <button class="icon-btn" aria-label="Language/Region">
+                            <i class="bi bi-globe2"></i>
+                        </button>
+                        <button class="icon-btn" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile nav (collapsible) -->
+        <div id="mobileNav" class="mobile-menu collapse d-lg-none">
+            <button class="mobile-menu-close" type="button" aria-label="Close menu">
+                <i class="bi bi-x"></i>
+            </button>
+            <nav class="mobile-links">
+                <!-- Resources with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-resources" aria-expanded="false" aria-controls="mobile-resources">
+                        <i class="bi bi-layers"></i><span>Resources</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-resources" class="collapse mobile-submenu">
+                        <a href="blog.html" class="mobile-sublink">Blog</a>
+                        <a href="press-releases.html" class="mobile-sublink">Press Releases</a>
+                        <a href="media-coverage.html" class="mobile-sublink">Media Coverage</a>
+                        <a href="industry-rankings.html" class="mobile-sublink">Industry Rankings</a>
+                        <a href="case-studies.html" class="mobile-sublink">Case Studies</a>
+                        <a href="reports.html" class="mobile-sublink">Reports</a>
+                    </div>
+                </div>
+                
+                <!-- Industries with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-industries" aria-expanded="false" aria-controls="mobile-industries">
+                        <i class="bi bi-basket"></i><span>Industries</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-industries" class="collapse mobile-submenu">
+                        <a href="../industries/industry-alcoholic-beverages.html" class="mobile-sublink">Alcoholic Beverages</a>
+                        <a href="../industries/industry-apparel.html" class="mobile-sublink">Apparel</a>
+                        <a href="../industries/industry-appliances.html" class="mobile-sublink">Appliances</a>
+                        <a href="../industries/industry-automotive.html" class="mobile-sublink">Automotive</a>
+                        <a href="../industries/industry-b2b-technology.html" class="mobile-sublink">B2B Technology</a>
+                        <a href="../industries/industry-beauty.html" class="mobile-sublink">Beauty</a>
+                    </div>
+                </div>
+                
+                <!-- Solutions with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-solutions" aria-expanded="false" aria-controls="mobile-solutions">
+                        <i class="bi bi-grid-3x3-gap"></i><span>Solutions</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-solutions" class="collapse mobile-submenu">
+                        <a href="../solutions/market.html" class="mobile-sublink">Market</a>
+                        <a href="../solutions/consumer.html" class="mobile-sublink">Consumer</a>
+                        <a href="../solutions/view-all.html" class="mobile-sublink">View All</a>
+                    </div>
+                </div>
+                
+                <!-- Company with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-company" aria-expanded="false" aria-controls="mobile-company">
+                        <i class="bi bi-house"></i><span>Company</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-company" class="collapse mobile-submenu">
+                        <a href="../company/growth_with_smith_2025.html" class="mobile-sublink">Growth with Smith 2025</a>
+                        <a href="../company/company.html" class="mobile-sublink">Company</a>
+                        <a href="../company/our-technology.html" class="mobile-sublink">Our Technology</a>
+                        <a href="../company/our-behaviors.html" class="mobile-sublink">Our Behaviors</a>
+                        <a href="../company/offices.html" class="mobile-sublink">Offices</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="mobile-social">
+                <a href="#" class="icon-btn" aria-label="Language/Region"><i class="bi bi-globe2"></i></a>
+                <a href="#" class="icon-btn" aria-label="Account"><i class="bi bi-person-circle"></i></a>
+            </div>
+            <div class="mobile-contact-footer">
+                <a href="#" class="mobile-link mobile-cta-small"><i class="bi bi-chat-left-text"></i><span>Contact Us</span></a>
+            </div>
+        </div>
+
+        <!-- Blog Hero -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="blog-hero-inner">
+                    <h1 class="blog-title">Resources</h1>
+                    <p class="blog-sub">Discover our industry experts' perspectives on the issues that matter to your business.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="blog-filters">
+            <div class="container">
+                <div class="filter-row align-items-end">
+                    <div class="filter-group">
+                        <label class="filter-label">Type</label>
+                        <div class="filter-select-wrap">
+                            <select class="form-select form-select-sm filter-select">
+                                <option selected>Blog</option>
+                                <option>Reports</option>
+                                <option>Press Releases</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Industry</label>
+                        <div class="filter-select-wrap">
+                            <select class="form-select form-select-sm filter-select">
+                                <option selected>All</option>
+                                <option>Retail</option>
+                                <option>CPG</option>
+                                <option>Media</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="filter-reset" type="button"><i class="bi bi-arrow-counterclockwise"></i><span>Reset</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Row: sidebar + feature tiles -->
+        <section class="blog-feature-row">
+            <div class="container">
+                <div class="row g-4">
+                    <aside class="col-lg-3 d-none d-lg-block sticky-col">
+                        <div class="podcast-card">
+                            <img src="../images/Growth Insights Thumbnail.jpg" alt="Growth Insights" class="podcast-cover">
+                            <div class="podcast-body">
+                                <h6>Listen to Circana's Growth Insights podcast featuring thought leaders across our industries.</h6>
+                                <a href="#" class="btn btn-podcast">Listen Now</a>
+                            </div>
+                        </div>
+                        <a href="#" class="rss-link"><i class="bi bi-rss"></i><span>RSS Feed</span></a>
+                    </aside>
+                    <div class="col-lg-9">
+                        <div class="features-grid">
+                            <a href="#" class="feature-tile">
+                                <img src="../images/courses/course-2.jpg" class="feature-img" alt="Beauty Market">
+                                <div class="feature-badge">INSIGHTS HUB</div>
+                                <h3 class="feature-title">A Collective View of Global Beauty Market Trends</h3>
+                                <span class="chip">View Series</span>
+                            </a>
+                            <a href="#" class="feature-tile">
+                                <img src="../images/statistics/person-books.jpg" class="feature-img" alt="Global Economic">
+                                <div class="feature-badge">INSIGHTS HUB</div>
+                                <h3 class="feature-title">Global Economic and Consumer Behavior Outlook</h3>
+                                <span class="chip">Insights Hub</span>
+                            </a>
+                            <a href="#" class="feature-tile">
+                                <img src="../images/features/Workers.avif" class="feature-img" alt="Shopper Series">
+                                <div class="feature-badge">BLOG SHOPPER SERIES</div>
+                                <h3 class="feature-title">Unpredictable Shoppers. Predictable Success.</h3>
+                                <span class="chip">View Series</span>
+                            </a>
+                        </div>
+
+                        <!-- Blog Grid (right column) -->
+                        <div class="blog-grid-section">
+                            <div class="blog-grid">
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-1.jpg')"></div>
+                                    <div class="post-meta">3 min read · Circana</div>
+                                    <h3 class="post-title">How To Accurately Measure the Impact of Your TV Campaigns</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-2.jpg')"></div>
+                                    <div class="post-meta">5 min read · Growth</div>
+                                    <h3 class="post-title">The Golf Retail Market is Showing Resilience</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-3.jpg')"></div>
+                                    <div class="post-meta">4 min read · Media</div>
+                                    <h3 class="post-title">Navigating a Triple Squeeze: Finding Growth in an Uncertain Economy</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-4.jpg')"></div>
+                                    <div class="post-meta">3 min read · Insights</div>
+                                    <h3 class="post-title">How to Effectively Use Audience Data for TV Buying</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-5.jpg')"></div>
+                                    <div class="post-meta">6 min read · Retail</div>
+                                    <h3 class="post-title">How to Stock Shelves for a New Product Launch</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/features/tech.jpg')"></div>
+                                    <div class="post-meta">4 min read · Supply Chain</div>
+                                    <h3 class="post-title">How Does Supply Chain Data Work for SMEs?</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/features/science.jpg')"></div>
+                                    <div class="post-meta">3 min read · Analytics</div>
+                                    <h3 class="post-title">Is Marketing Mix Modeling Right for My Brand?</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/features/data.jpg')"></div>
+                                    <div class="post-meta">5 min read · Data</div>
+                                    <h3 class="post-title">How To Fix Data Gaps for Your Marketing Campaign</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/features/Workers.avif')"></div>
+                                    <div class="post-meta">4 min read · Careers</div>
+                                    <h3 class="post-title">How To Find & Target Your Brand’s Most Valuable Audience Segments</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-1.jpg')"></div>
+                                    <div class="post-meta">3 min read · Circana</div>
+                                    <h3 class="post-title">How To Mitigate the Risk of Supply Chain Disruptions with Data</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-2.jpg')"></div>
+                                    <div class="post-meta">4 min read · Consumer</div>
+                                    <h3 class="post-title">The Deep Breath Before the Promotion Plunge?</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-3.jpg')"></div>
+                                    <div class="post-meta">5 min read · Finance</div>
+                                    <h3 class="post-title">How to Manage Demand Volatility with Supply Chain Data</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-4.jpg')"></div>
+                                    <div class="post-meta">3 min read · Trends</div>
+                                    <h3 class="post-title">Navigating SNAP Changes: What CPG Leaders Need to Know</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/courses/course-5.jpg')"></div>
+                                    <div class="post-meta">4 min read · Media</div>
+                                    <h3 class="post-title">Fandom Levels Up: Campaign Measurement</h3>
+                                </a>
+                                <a class="post-card" href="#">
+                                    <div class="post-thumb" style="background-image:url('../images/features/tech.jpg')"></div>
+                                    <div class="post-meta">4 min read · Insights</div>
+                                    <h3 class="post-title">Leading with Clarity: Insights for the Path Ahead</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid moved into right column above -->
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="footer-brand">
+                            <img src="../images/logos/logo.png" alt="Circana" class="footer-logo" >
+                            <p class="footer-tag">Complexity into Clarity.</p>
+                            <p class="footer-copy">Circana transforms complexity into clarity with the most complete view of the consumer, inspiring actions that unlock business growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Insights</h5>
+                        <ul class="footer-list">
+                            <li><a href="industry-rankings.html">Industry Rankings</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="press-releases.html">Press Releases</a></li>
+                            <li><a href="#">Podcasts</a></li>
+                            <li><a href="media-coverage.html">Media Coverage</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Entertainment Monthly Insights</a></li>
+                            <li><a href="#">Product Training</a></li>
+                            <li><a href="reports.html">Reports</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Solutions</h5>
+                        <a href="#" class="selector-btn">Solution Selector</a>
+                        <ul class="footer-list mt-2">
+                            <li><a href="#">Measure Demand</a></li>
+                            <li><a href="#">Accelerate Demand</a></li>
+                        </ul>
+                        <h6 class="footer-sub mt-4">NCSolutions is now part of Circana</h6>
+                        <ul class="footer-list small">
+                            <li><a href="#">Services Privacy Statement</a></li>
+                            <li><a href="#">California Privacy Statement</a></li>
+                            <li><a href="#">Do Not Sell My Information</a></li>
+                            <li><a href="#">Request for Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Who we are</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Growth Summit 2025</a></li>
+                            <li><a href="#">Our Behaviors</a></li>
+                            <li><a href="#">Culture of Inclusion and Belonging</a></li>
+                            <li><a href="#">Philanthropy</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Offices</a></li>
+                        </ul>
+                        <h5 class="footer-title mt-3">Careers at Circana</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Circana Careers</a></li>
+                            <li><a href="#">Job Openings</a></li>
+                            <li><a href="#">Fraud Alert</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© <span id="year"></span> Circana. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<!-- Contact Form Modal -->
+<div id="contactModal" class="contact-modal">
+    <div class="contact-modal-content">
+        <div class="contact-modal-header">
+            <h2 class="contact-modal-title">Contact Us</h2>
+            <button class="contact-modal-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="contact-modal-body">
+            <form id="contactForm" class="contact-form">
+                <div class="contact-form-row">
+                    <div class="contact-form-group">
+                        <label for="firstName" class="contact-form-label">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" class="contact-form-input" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="lastName" class="contact-form-label">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" class="contact-form-input" required>
+                    </div>
+                </div>
+                <div class="contact-form-group">
+                    <label for="email" class="contact-form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" class="contact-form-input" required>
+                </div>
+                <div class="contact-form-group">
+                    <label for="phone" class="contact-form-label">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="contact-form-input">
+                </div>
+                <div class="contact-form-group">
+                    <label for="company" class="contact-form-label">Company Name</label>
+                    <input type="text" id="company" name="company" class="contact-form-input">
+                </div>
+                <div class="contact-form-group">
+                    <label for="subject" class="contact-form-label">Subject <span class="required">*</span></label>
+                    <select id="subject" name="subject" class="contact-form-select" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="sales">Sales Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="media">Media Inquiry</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="contact-form-group">
+                    <label for="message" class="contact-form-label">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" class="contact-form-textarea" required></textarea>
+                </div>
+                <button type="submit" class="contact-form-submit">Send Message</button>
+            </form>
+            <div id="contactFormSuccess" class="contact-form-success">
+                <div class="contact-form-success-icon">✓</div>
+                <h3 class="contact-form-success-title">Thank You!</h3>
+                <p class="contact-form-success-message">We've received your message and will get back to you soon.</p>
+                <button type="button" class="contact-form-submit" onclick="closeContactModal()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function(){
+            emailjs.init("CKYUSJWCHRXIC9j-E");
+        })();
+    </script>
+    <script>
+        // Close dropdown when any side-link is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideLinks = document.querySelectorAll('.side-link');
+            sideLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    // Find the parent collapse element and close it
+                    const collapseElement = this.closest('.collapse');
+                    if (collapseElement) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(collapseElement) || new bootstrap.Collapse(collapseElement);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+
+            // Contact Form Modal Functionality
+            const contactModal = document.getElementById('contactModal');
+            const contactForm = document.getElementById('contactForm');
+            const contactFormSuccess = document.getElementById('contactFormSuccess');
+            const closeBtn = document.querySelector('.contact-modal-close');
+
+            function openContactModal() {
+                contactModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeContactModal() {
+                contactModal.classList.remove('show');
+                document.body.style.overflow = '';
+                setTimeout(function() {
+                    contactForm.reset();
+                    contactForm.style.display = 'block';
+                    contactFormSuccess.classList.remove('show');
+                }, 300);
+            }
+
+            window.closeContactModal = closeContactModal;
+
+            const contactButtons = document.querySelectorAll('.btn-contact, .ready-btn-primary, .mobile-cta');
+            contactButtons.forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openContactModal();
+                });
+            });
+
+            contactModal.addEventListener('click', function(e) {
+                if (e.target === contactModal) {
+                    closeContactModal();
+                }
+            });
+
+            closeBtn.addEventListener('click', closeContactModal);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && contactModal.classList.contains('show')) {
+                    closeContactModal();
+                }
+            });
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = contactForm.querySelector('.contact-form-submit');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+
+                // Collect form data
+                const formData = {
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value || 'Not provided',
+                    company: document.getElementById('company').value || 'Not provided',
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                // EmailJS configuration
+                const serviceId = 'service_e2w7kzo';
+                const templateId = 'template_7i4in4n';
+                
+                // Prepare template parameters for EmailJS
+                const templateParams = {
+                    from_name: `${formData.firstName} ${formData.lastName}`,
+                    from_email: formData.email,
+                    phone: formData.phone,
+                    company: formData.company,
+                    subject: formData.subject,
+                    message: formData.message,
+                    to_email: 'khanshaharyar083@gmail.com'
+                };
+
+                // Send email using EmailJS
+                emailjs.send(serviceId, templateId, templateParams)
+                    .then(function(response) {
+                        // Success
+                        contactForm.style.display = 'none';
+                        contactFormSuccess.classList.add('show');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                        contactForm.reset();
+                    })
+                    .catch(function(error) {
+                        // Error handling
+                        console.error('Email sending failed:', error);
+                        alert('Sorry, there was an error sending your message. Please try again later.');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                    });
+            });
+            
+            // Mobile menu backdrop toggle and close button
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav) {
+                // Close button functionality
+                const closeButton = mobileNav.querySelector('.mobile-menu-close');
+                if (closeButton) {
+                    closeButton.addEventListener('click', function() {
+                        const bsCollapse = bootstrap.Collapse.getInstance(mobileNav);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    });
+                }
+                
+                mobileNav.addEventListener('show.bs.collapse', function() {
+                    document.body.classList.add('mobile-menu-open');
+                });
+                mobileNav.addEventListener('hide.bs.collapse', function() {
+                    document.body.classList.remove('mobile-menu-open');
+                });
+            }
+        });
+    </script>
+ </body>
+ </html>
+
+
+

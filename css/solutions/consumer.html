@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circana — Consumer Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="consumer.css">
+</head>
+<body>
+    <!-- Fixed Sidebar (Resources, Industries, Solutions, Company) -->
+    <nav class="sidebar-rail">
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-expanded="false" aria-controls="drop-resources">
+            <i class="bi bi-layers"></i>
+            <span>Resources</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-expanded="false" aria-controls="drop-industries">
+            <i class="bi bi-basket"></i>
+            <span>Industries</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-expanded="false" aria-controls="drop-solutions">
+            <i class="bi bi-grid-3x3-gap"></i>
+            <span>Solutions</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-expanded="false" aria-controls="drop-company">
+            <i class="bi bi-house"></i>
+            <span>Company</span>
+        </button>
+    </nav>
+
+    <!-- Left flyout dropdown panels -->
+    <div id="sideAccordion" class="side-dropdown d-none d-md-block">
+        <div id="drop-resources" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Resources</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../Resources/blog.html" class="side-link">Blog</a>
+                <a href="../Resources/press-releases.html" class="side-link">Press Releases</a>
+                <a href="../Resources/media-coverage.html" class="side-link">Media Coverage</a>
+                <a href="../Resources/industry-rankings.html" class="side-link">Industry Rankings</a>
+                <a href="../Resources/case-studies.html" class="side-link">Case Studies</a>
+                <a href="../Resources/reports.html" class="side-link">Reports</a>
+            </div>
+        </div>
+        <div id="drop-industries" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Industries</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../industries/industry-alcoholic-beverages.html" class="side-link">Alcoholic Beverages</a>
+                <a href="../industries/industry-apparel.html" class="side-link">Apparel</a>
+                <a href="../industries/industry-appliances.html" class="side-link">Appliances</a>
+                <a href="../industries/industry-automotive.html" class="side-link">Automotive</a>
+                <a href="../industries/industry-b2b-technology.html" class="side-link">B2B Technology</a>
+                <a href="../industries/industry-beauty.html" class="side-link">Beauty</a>
+            </div>
+        </div>
+        <div id="drop-solutions" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Solutions</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="market.html" class="side-link">Market</a>
+                <a href="consumer.html" class="side-link">Consumer</a>
+                <a href="view-all.html" class="side-link">View All</a>
+            </div>
+        </div>
+        <div id="drop-company" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Company</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../company/growth_with_smith_2025.html" class="side-link">Growth with Smith 2025</a>
+                <a href="../company/company.html" class="side-link">Company</a>
+                <a href="../company/our-technology.html" class="side-link">Our Technology</a>
+                <a href="../company/our-behaviors.html" class="side-link">Our Behaviors</a>
+                <a href="../company/offices.html" class="side-link">Offices</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header class="top-nav fixed-top">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between" style="height:72px;">
+                    <a href="../index.html" class="brand d-inline-flex align-items-center text-decoration-none">
+                        <img src="../images/logos/logo.png" alt="Circana" class="brand-logo" >
+                    </a>
+
+                    <button class="nav-toggle d-lg-none icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <div class="nav-search d-none d-md-flex align-items-center flex-grow-1">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <input type="text" class="form-control nav-search-input" placeholder="Search" aria-label="Search">
+                    </div>
+
+                    <div class="nav-actions d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-contact">Contact Us</a>
+                        <button class="icon-btn" aria-label="Language/Region">
+                            <i class="bi bi-globe2"></i>
+                        </button>
+                        <button class="icon-btn" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile nav (collapsible) -->
+        <div id="mobileNav" class="mobile-menu collapse d-lg-none">
+            <button class="mobile-menu-close" type="button" aria-label="Close menu">
+                <i class="bi bi-x"></i>
+            </button>
+            <nav class="mobile-links">
+                <!-- Resources with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-resources" aria-expanded="false" aria-controls="mobile-resources">
+                        <i class="bi bi-layers"></i><span>Resources</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-resources" class="collapse mobile-submenu">
+                        <a href="../Resources/blog.html" class="mobile-sublink">Blog</a>
+                        <a href="../Resources/press-releases.html" class="mobile-sublink">Press Releases</a>
+                        <a href="../Resources/media-coverage.html" class="mobile-sublink">Media Coverage</a>
+                        <a href="../Resources/industry-rankings.html" class="mobile-sublink">Industry Rankings</a>
+                        <a href="../Resources/case-studies.html" class="mobile-sublink">Case Studies</a>
+                        <a href="../Resources/reports.html" class="mobile-sublink">Reports</a>
+                    </div>
+                </div>
+                
+                <!-- Industries with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-industries" aria-expanded="false" aria-controls="mobile-industries">
+                        <i class="bi bi-basket"></i><span>Industries</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-industries" class="collapse mobile-submenu">
+                        <a href="../industries/industry-alcoholic-beverages.html" class="mobile-sublink">Alcoholic Beverages</a>
+                        <a href="../industries/industry-apparel.html" class="mobile-sublink">Apparel</a>
+                        <a href="../industries/industry-appliances.html" class="mobile-sublink">Appliances</a>
+                        <a href="../industries/industry-automotive.html" class="mobile-sublink">Automotive</a>
+                        <a href="../industries/industry-b2b-technology.html" class="mobile-sublink">B2B Technology</a>
+                        <a href="../industries/industry-beauty.html" class="mobile-sublink">Beauty</a>
+                    </div>
+                </div>
+                
+                <!-- Solutions with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-solutions" aria-expanded="false" aria-controls="mobile-solutions">
+                        <i class="bi bi-grid-3x3-gap"></i><span>Solutions</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-solutions" class="collapse mobile-submenu">
+                        <a href="market.html" class="mobile-sublink">Market</a>
+                        <a href="consumer.html" class="mobile-sublink">Consumer</a>
+                        <a href="view-all.html" class="mobile-sublink">View All</a>
+                    </div>
+                </div>
+                
+                <!-- Company with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-company" aria-expanded="false" aria-controls="mobile-company">
+                        <i class="bi bi-house"></i><span>Company</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-company" class="collapse mobile-submenu">
+                        <a href="../company/growth_with_smith_2025.html" class="mobile-sublink">Growth with Smith 2025</a>
+                        <a href="../company/company.html" class="mobile-sublink">Company</a>
+                        <a href="../company/our-technology.html" class="mobile-sublink">Our Technology</a>
+                        <a href="../company/our-behaviors.html" class="mobile-sublink">Our Behaviors</a>
+                        <a href="../company/offices.html" class="mobile-sublink">Offices</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="mobile-social">
+                <a href="#" class="icon-btn" aria-label="Language/Region"><i class="bi bi-globe2"></i></a>
+                <a href="#" class="icon-btn" aria-label="Account"><i class="bi bi-person-circle"></i></a>
+            </div>
+            <div class="mobile-contact-footer">
+                <a href="#" class="mobile-link mobile-cta-small"><i class="bi bi-chat-left-text"></i><span>Contact Us</span></a>
+            </div>
+        </div>
+
+        <!-- Consumer Section -->
+        <section class="consumer-section" style="margin-top: 72px;">
+            <div class="container-fluid px-0">
+                <div class="row g-0">
+                    <!-- Image Column -->
+                    <div class="col-lg-6">
+                        <div class="consumer-image-wrapper">
+                            <img src="../images/solution/consumer.jpg" alt="Consumer insights" class="consumer-image">
+                        </div>
+                    </div>
+                    
+                    <!-- Content Column -->
+                    <div class="col-lg-6">
+                        <div class="consumer-content">
+                            <h1 class="consumer-heading">Consumer</h1>
+                            <h2 class="consumer-subheading">Understand complex consumer behavior with clear, accurate insights into omnichannel dynamics</h2>
+                            <p class="consumer-description">
+                                Circana delivers the most comprehensive understanding of the consumer. Through a seamless integration of multiple proprietary data panel sources into a single, unified platform, you can:
+                            </p>
+                            
+                            <ul class="consumer-features">
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Measure buyer behavior</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Track what is purchased, by whom</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Uncover motivations and intent</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Analyze data from one of the largest panels in the U.S.</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="#" class="consumer-cta-btn">Connect with Us</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Client Logos Section -->
+                <div class="consumer-clients">
+                    <div class="testi-logos">
+                        <div class="logos-lead">Join more than 7,000 clients and partners worldwide</div>
+                        <div class="logos-row">
+                          <img src="../images/logos/one.svg" alt="logo" onerror="this.style.opacity=0.35">
+                          <img src="../images/logos/two.svg" alt="logo" onerror="this.style.opacity=0.35">
+                          <img src="../images/logos/three.svg" alt="logo" onerror="this.style.opacity=0.35">
+                          <img src="../images/logos/four.svg" alt="logo" onerror="this.style.opacity=0.35">
+                          <img src="../image.pngimages/logos/five.svg" alt="logo" onerror="this.style.opacity=0.35">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Track & Analyze Section -->
+        <section class="track-analyze-section">
+            <div class="container">
+                <h2 class="track-analyze-heading">Track & Analyze Consumer Behavior & Shopping Trends</h2>
+                <div class="row g-4">
+                    <!-- Card 1: The Right Outcomes -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="track-analyze-card">
+                            <div class="track-analyze-icon">
+                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 48 L16 40 L24 44 L32 28 L40 36 L48 24 L56 32" stroke="#4a148c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    <circle cx="16" cy="40" r="3" fill="#4a148c"/>
+                                    <circle cx="24" cy="44" r="3" fill="#4a148c"/>
+                                    <circle cx="32" cy="28" r="3" fill="#4a148c"/>
+                                    <circle cx="40" cy="36" r="3" fill="#4a148c"/>
+                                    <circle cx="48" cy="24" r="3" fill="#4a148c"/>
+                                    <circle cx="56" cy="32" r="3" fill="#4a148c"/>
+                                </svg>
+                            </div>
+                            <h3 class="track-analyze-card-title">The Right Outcomes Based on POS Truth</h3>
+                            <p class="track-analyze-card-description">
+                                Circana calibrates our panel to point-of-sale (POS) data with over 1,100 retail partners in the U.S. to reflect market reality and maintain accuracy in reporting.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2: The Right Insights -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="track-analyze-card">
+                            <div class="track-analyze-icon">
+                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="12" y="16" width="40" height="32" rx="2" stroke="#4a148c" stroke-width="3" fill="none"/>
+                                    <circle cx="32" cy="32" r="8" stroke="#4a148c" stroke-width="3" fill="none"/>
+                                    <line x1="38" y1="38" x2="44" y2="44" stroke="#4a148c" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="track-analyze-card-title">The Right Insights Across Millions of Items</h3>
+                            <p class="track-analyze-card-description">
+                                Circana applies rigorous classification via our proprietary dictionary with over 390M UPCs and an average of 310K new items added per week, tailored to meet your needs with the right level of detail.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3: The Right Panel -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="track-analyze-card">
+                            <div class="track-analyze-icon">
+                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="24" r="6" fill="#4a148c"/>
+                                    <circle cx="32" cy="20" r="6" fill="#4a148c"/>
+                                    <circle cx="44" cy="24" r="6" fill="#4a148c"/>
+                                    <path d="M20 30 Q26 36, 32 34 Q38 36, 44 30" stroke="#4a148c" stroke-width="3" stroke-linecap="round" fill="none"/>
+                                    <path d="M20 30 Q26 40, 32 38 Q38 40, 44 30" stroke="#4a148c" stroke-width="3" stroke-linecap="round" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="track-analyze-card-title">The Right Panel for the Right Answers</h3>
+                            <p class="track-analyze-card-description">
+                                One of the largest static receipt panels in the U.S. with <strong>200K static panelists</strong> and building. Our data also spans UPC scan, loyalty panel, and surveys.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consumer Data Solutions Section -->
+        <section class="consumer-data-solutions-section">
+            <div class="container">
+                <h2 class="consumer-data-solutions-heading">Consumer Data Solutions</h2>
+                <div class="row align-items-center g-5">
+                    <!-- Left Column: Text Content -->
+                    <div class="col-xl-7 col-lg-7 col-md-12">
+                        <div class="consumer-data-solutions-content">
+                            <!-- Complete Beauty -->
+                            <div class="consumer-data-solution-item">
+                                <h3 class="consumer-data-solution-title">Complete Beauty</h3>
+                                <p class="consumer-data-solution-description">
+                                    Covering mass and prestige POS data, the Complete Beauty solution pinpoints emerging shifts in consumer preferences, category performance, and more. The depth and breadth of data available with the combination of prestige and mass beauty all in one place enables brands to tailor strategies to match evolving beauty market demands.
+                                </p>
+                            </div>
+                            
+                            <!-- Complete Consumer -->
+                            <div class="consumer-data-solution-item">
+                                <h3 class="consumer-data-solution-title">Complete Consumer</h3>
+                                <p class="consumer-data-solution-description">
+                                    Our Complete Consumer solution combines verified purchase data, survey insights, and advanced shopper panels to help you see how, where, and why consumers shop, leading you to make smarter decisions that drive results.
+                                </p>
+                            </div>
+                            
+                            <!-- Complete Food & Beverage -->
+                            <div class="consumer-data-solution-item">
+                                <h3 class="consumer-data-solution-title">Complete Food &amp; Beverage</h3>
+                                <p class="consumer-data-solution-description">
+                                    As a trusted leader in data and analytics, Circana provides insight into everything purchased and consumed in and away from home. Our Complete Food &amp; Beverage solution delivers a complete understanding of U.S. CPG, foodservice, and consumption to bolster your business. Our services have helped countless businesses get a more complete view of the marketplace, understand new strategies, drive innovations, and more.
+                                </p>
+                            </div>
+                            
+                            <!-- Complete Market -->
+                            <div class="consumer-data-solution-item">
+                                <h3 class="consumer-data-solution-title">Complete Market</h3>
+                                <p class="consumer-data-solution-description">
+                                    In today&rsquo;s complex retail landscape, economic uncertainty and shifting consumer habits make it challenging for manufacturers and retailers to predict and adapt effectively. Circana helps by providing a clear picture of where and how people shop. When you&rsquo;re making big decisions using data, coverage equals confidence, accuracy means precision, and granularity enhances clarity.
+                                </p>
+                            </div>
+                            
+                            <!-- National Eating Trends -->
+                            <div class="consumer-data-solution-item">
+                                <h3 class="consumer-data-solution-title">National Eating Trends</h3>
+                                <p class="consumer-data-solution-description">
+                                    Circana&rsquo;s NET solution captures in-the-moment reporting of everything consumers eat and drink &mdash; at home and away. With a robust, census-weighted sample across all age groups, NET panel data delivers unmatched insight into food and beverage consumption for your brand.
+                                </p>
+                            </div>
+                            
+                            <!-- Survey -->
+                            <div class="consumer-data-solution-item">
+                                <h3 class="consumer-data-solution-title">Survey</h3>
+                                <p class="consumer-data-solution-description">
+                                    What people say and what they buy don&rsquo;t always align. Circana Survey Solutions bridge that gap. By combining verified purchase behaviors with survey tools, we help you uncover what people think, what they do, and why so you can better predict and respond to their decision-making process.
+                                </p>
+                            </div>
+                            
+                            <!-- CREST -->
+                            <div class="consumer-data-solution-item">
+                                <h3 class="consumer-data-solution-title">CREST</h3>
+                                <p class="consumer-data-solution-description">
+                                    CREST&reg; consumer panel data is the only source for tracking complete market share and measuring actual consumption of major restaurant brands. Understand how your consumers behaved yesterday to make high-impact decisions for tomorrow.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Image -->
+                    <div class="col-xl-5 col-lg-5 col-md-12">
+                        <div class="consumer-data-solutions-image-wrapper">
+                            <img src="../images/solution/consumer_data.jpg" alt="Burger highlighting consumer dining trends" class="consumer-data-solutions-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Put Our Consumer Data Into Practice Section -->
+        <section class="consumer-practice-section">
+            <div class="container-fluid px-0">
+                <div class="row g-0">
+                    <!-- Left Column: Image -->
+                    <div class="col-lg-6">
+                        <div class="consumer-practice-image-wrapper">
+                            <img src="../images/solution/consumer_out.jpg" alt="Consumer data in practice" class="consumer-practice-image">
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Text Content -->
+                    <div class="col-lg-6">
+                        <div class="consumer-practice-content">
+                            <h2 class="consumer-practice-heading">Put Our Consumer Data Into Practice</h2>
+                            
+                            <!-- Methodology -->
+                            <div class="consumer-practice-item">
+                                <h3 class="consumer-practice-item-title">Methodology</h3>
+                                <p class="consumer-practice-item-description">
+                                    Getting trustworthy consumer data is easy. Circana has been building and integrating the largest consumer panels in the U.S. for over 60 years. We set the market research standard for unbiased panel data collection processes by applying rigid methodology rules around panelist incentivization. This ensures a higher degree of accuracy than any other panel data provider can offer.
+                                </p>
+                            </div>
+                            
+                            <!-- Accessibility -->
+                            <div class="consumer-practice-item">
+                                <h3 class="consumer-practice-item-title">Accessibility</h3>
+                                <p class="consumer-practice-item-description">
+                                    Accessing Circana's consumer panel data is simple. Circana's data visualization platform, Unify+™, houses every data source Circana offers, including panel data. By synthesizing different panel languages into single custom reporting views, teams can effortlessly turn analytical reporting into actionable insights with speed and efficiency.
+                                </p>
+                            </div>
+                            
+                            <!-- Consultancy -->
+                            <div class="consumer-practice-item">
+                                <h3 class="consumer-practice-item-title">Consultancy</h3>
+                                <p class="consumer-practice-item-description">
+                                    Maximizing the impact of our consumer data insight is painless. When brands invest in our comprehensive consumer data, they partner with panel subject matter experts to help them with everything from developing survey questions to integrating receipt data insights alongside POS learnings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consumer Insights Section -->
+        <section class="consumer-insights-section">
+            <div class="container">
+                <div class="consumer-insights-header">
+                    <h2 class="consumer-insights-heading">Read More Consumer Insights</h2>
+                </div>
+
+                <div class="row g-4 consumer-insights-grid">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="insight-card">
+                            <div class="insight-card-image">
+                                <img src="../images/research/research-1.jpg" alt="Professional reviewing marketing analytics">
+                            </div>
+                            <div class="insight-card-body">
+                                <h3 class="insight-card-title">Choosing the Right Marketing Data Partner Unlock Better Audience Targeting</h3>
+                                <div class="insight-card-meta">9 Apr 2025<span aria-hidden="true"> | </span>Reports</div>
+                            </div>
+                            <div class="insight-card-divider" aria-hidden="true"></div>
+                        </article>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="insight-card">
+                            <div class="insight-card-image">
+                                <img src="../images/research/research-2.jpg" alt="Person holding a digital receipt while shopping online">
+                            </div>
+                            <div class="insight-card-body">
+                                <h3 class="insight-card-title">What to Look for in a Receipt Panel Partner and What to Avoid</h3>
+                                <div class="insight-card-meta">30 Jul 2024<span aria-hidden="true"> | </span>Blog</div>
+                            </div>
+                            <div class="insight-card-divider" aria-hidden="true"></div>
+                        </article>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="insight-card">
+                            <div class="insight-card-image logo-card">
+                                <img src="../images/logos/logo.png" alt="Circana logo">
+                            </div>
+                            <div class="insight-card-body">
+                                <h3 class="insight-card-title">Circana Expands Point-of-Sale and Panel Data Access for Clients, Meeting Evolving Technology Needs</h3>
+                                <div class="insight-card-meta">10 Sept 2024<span aria-hidden="true"> | </span>Press Releases</div>
+                            </div>
+                            <div class="insight-card-divider" aria-hidden="true"></div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="consumer-insights-footer">
+                    <a href="#" class="consumer-insights-link">View all articles</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="footer-brand">
+                            <img src="../images/logos/logo.png" alt="Circana" class="footer-logo" >
+                            <p class="footer-tag">Complexity into Clarity.</p>
+                            <p class="footer-copy">Circana transforms complexity into clarity with the most complete view of the consumer, inspiring actions that unlock business growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Insights</h5>
+                        <ul class="footer-list">
+                            <li><a href="../Resources/industry-rankings.html">Industry Rankings</a></li>
+                            <li><a href="../Resources/blog.html">Blog</a></li>
+                            <li><a href="../Resources/press-releases.html">Press Releases</a></li>
+                            <li><a href="#">Podcasts</a></li>
+                            <li><a href="../Resources/media-coverage.html">Media Coverage</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Entertainment Monthly Insights</a></li>
+                            <li><a href="#">Product Training</a></li>
+                            <li><a href="../Resources/reports.html">Reports</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Solutions</h5>
+                        <a href="#" class="selector-btn">Solution Selector</a>
+                        <ul class="footer-list mt-2">
+                            <li><a href="market.html">Market</a></li>
+                            <li><a href="consumer.html">Consumer</a></li>
+                            <li><a href="view-all.html">View All</a></li>
+                        </ul>
+                        <h6 class="footer-sub mt-4">NCSolutions is now part of Circana</h6>
+                        <ul class="footer-list small">
+                            <li><a href="#">Services Privacy Statement</a></li>
+                            <li><a href="#">California Privacy Statement</a></li>
+                            <li><a href="#">Do Not Sell My Information</a></li>
+                            <li><a href="#">Request for Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Who we are</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Growth Summit 2025</a></li>
+                            <li><a href="#">Our Behaviors</a></li>
+                            <li><a href="#">Culture of Inclusion and Belonging</a></li>
+                            <li><a href="#">Philanthropy</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Offices</a></li>
+                        </ul>
+                        <h5 class="footer-title mt-3">Careers at Circana</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Circana Careers</a></li>
+                            <li><a href="#">Job Openings</a></li>
+                            <li><a href="#">Fraud Alert</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© <span id="year"></span> Circana. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<!-- Contact Form Modal -->
+<div id="contactModal" class="contact-modal">
+    <div class="contact-modal-content">
+        <div class="contact-modal-header">
+            <h2 class="contact-modal-title">Contact Us</h2>
+            <button class="contact-modal-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="contact-modal-body">
+            <form id="contactForm" class="contact-form">
+                <div class="contact-form-row">
+                    <div class="contact-form-group">
+                        <label for="firstName" class="contact-form-label">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" class="contact-form-input" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="lastName" class="contact-form-label">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" class="contact-form-input" required>
+                    </div>
+                </div>
+                <div class="contact-form-group">
+                    <label for="email" class="contact-form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" class="contact-form-input" required>
+                </div>
+                <div class="contact-form-group">
+                    <label for="phone" class="contact-form-label">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="contact-form-input">
+                </div>
+                <div class="contact-form-group">
+                    <label for="company" class="contact-form-label">Company Name</label>
+                    <input type="text" id="company" name="company" class="contact-form-input">
+                </div>
+                <div class="contact-form-group">
+                    <label for="subject" class="contact-form-label">Subject <span class="required">*</span></label>
+                    <select id="subject" name="subject" class="contact-form-select" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="sales">Sales Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="media">Media Inquiry</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="contact-form-group">
+                    <label for="message" class="contact-form-label">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" class="contact-form-textarea" required></textarea>
+                </div>
+                <button type="submit" class="contact-form-submit">Send Message</button>
+            </form>
+            <div id="contactFormSuccess" class="contact-form-success">
+                <div class="contact-form-success-icon">✓</div>
+                <h3 class="contact-form-success-title">Thank You!</h3>
+                <p class="contact-form-success-message">We've received your message and will get back to you soon.</p>
+                <button type="button" class="contact-form-submit" onclick="closeContactModal()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function(){
+            emailjs.init("CKYUSJWCHRXIC9j-E");
+        })();
+    </script>
+    <script>
+        // Close dropdown when any side-link is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideLinks = document.querySelectorAll('.side-link');
+            sideLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    // Find the parent collapse element and close it
+                    const collapseElement = this.closest('.collapse');
+                    if (collapseElement) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(collapseElement) || new bootstrap.Collapse(collapseElement);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+
+            // Contact Form Modal Functionality
+            const contactModal = document.getElementById('contactModal');
+            const contactForm = document.getElementById('contactForm');
+            const contactFormSuccess = document.getElementById('contactFormSuccess');
+            const closeBtn = document.querySelector('.contact-modal-close');
+
+            // Open modal function
+            function openContactModal() {
+                contactModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Close modal function
+            function closeContactModal() {
+                contactModal.classList.remove('show');
+                document.body.style.overflow = '';
+                setTimeout(function() {
+                    contactForm.reset();
+                    contactForm.style.display = 'block';
+                    contactFormSuccess.classList.remove('show');
+                }, 300);
+            }
+
+            window.closeContactModal = closeContactModal;
+
+            // Attach click handlers to all Contact Us buttons
+            const contactButtons = document.querySelectorAll('.btn-contact, .ready-btn-primary, .mobile-cta, .consumer-cta-btn');
+            contactButtons.forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openContactModal();
+                });
+            });
+
+            contactModal.addEventListener('click', function(e) {
+                if (e.target === contactModal) {
+                    closeContactModal();
+                }
+            });
+
+            closeBtn.addEventListener('click', closeContactModal);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && contactModal.classList.contains('show')) {
+                    closeContactModal();
+                }
+            });
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = contactForm.querySelector('.contact-form-submit');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+
+                // Collect form data
+                const formData = {
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value || 'Not provided',
+                    company: document.getElementById('company').value || 'Not provided',
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                // EmailJS configuration
+                const serviceId = 'service_e2w7kzo';
+                const templateId = 'template_7i4in4n';
+                
+                // Prepare template parameters for EmailJS
+                const templateParams = {
+                    from_name: `${formData.firstName} ${formData.lastName}`,
+                    from_email: formData.email,
+                    phone: formData.phone,
+                    company: formData.company,
+                    subject: formData.subject,
+                    message: formData.message,
+                    to_email: 'khanshaharyar083@gmail.com'
+                };
+
+                // Send email using EmailJS
+                emailjs.send(serviceId, templateId, templateParams)
+                    .then(function(response) {
+                        // Success
+                        contactForm.style.display = 'none';
+                        contactFormSuccess.classList.add('show');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                        contactForm.reset();
+                    })
+                    .catch(function(error) {
+                        // Error handling
+                        console.error('Email sending failed:', error);
+                        alert('Sorry, there was an error sending your message. Please try again later.');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                    });
+            });
+            
+            // Mobile menu backdrop toggle and close button
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav) {
+                // Close button functionality
+                const closeButton = mobileNav.querySelector('.mobile-menu-close');
+                if (closeButton) {
+                    closeButton.addEventListener('click', function() {
+                        const bsCollapse = bootstrap.Collapse.getInstance(mobileNav);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    });
+                }
+                
+                mobileNav.addEventListener('show.bs.collapse', function() {
+                    document.body.classList.add('mobile-menu-open');
+                });
+                mobileNav.addEventListener('hide.bs.collapse', function() {
+                    document.body.classList.remove('mobile-menu-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

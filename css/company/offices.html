@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circana — Offices</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="offices.css">
+</head>
+<body>
+    <!-- Fixed Sidebar (Resources, Industries, Solutions, Company) -->
+    <nav class="sidebar-rail">
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-expanded="false" aria-controls="drop-resources">
+            <i class="bi bi-layers"></i>
+            <span>Resources</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-expanded="false" aria-controls="drop-industries">
+            <i class="bi bi-basket"></i>
+            <span>Industries</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-expanded="false" aria-controls="drop-solutions">
+            <i class="bi bi-grid-3x3-gap"></i>
+            <span>Solutions</span>
+        </button>
+        <button class="side-item" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-expanded="false" aria-controls="drop-company">
+            <i class="bi bi-house"></i>
+            <span>Company</span>
+        </button>
+    </nav>
+
+    <!-- Left flyout dropdown panels -->
+    <div id="sideAccordion" class="side-dropdown d-none d-md-block">
+        <div id="drop-resources" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Resources</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-resources" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../Resources/blog.html" class="side-link">Blog</a>
+                <a href="../Resources/press-releases.html" class="side-link">Press Releases</a>
+                <a href="../Resources/media-coverage.html" class="side-link">Media Coverage</a>
+                <a href="../Resources/industry-rankings.html" class="side-link">Industry Rankings</a>
+                <a href="../Resources/case-studies.html" class="side-link">Case Studies</a>
+                <a href="../Resources/reports.html" class="side-link">Reports</a>
+            </div>
+        </div>
+        <div id="drop-industries" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Industries</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-industries" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../industries/industry-alcoholic-beverages.html" class="side-link">Alcoholic Beverages</a>
+                <a href="../industries/industry-apparel.html" class="side-link">Apparel</a>
+                <a href="../industries/industry-appliances.html" class="side-link">Appliances</a>
+                <a href="../industries/industry-automotive.html" class="side-link">Automotive</a>
+                <a href="../industries/industry-b2b-technology.html" class="side-link">B2B Technology</a>
+                <a href="../industries/industry-beauty.html" class="side-link">Beauty</a>
+            </div>
+        </div>
+        <div id="drop-solutions" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Solutions</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-solutions" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="../solutions/market.html" class="side-link">Market</a>
+                <a href="../solutions/consumer.html" class="side-link">Consumer</a>
+                <a href="../solutions/view-all.html" class="side-link">View All</a>
+            </div>
+        </div>
+        <div id="drop-company" class="collapse" data-bs-parent="#sideAccordion">
+            <div class="side-panel">
+                <div class="side-panel-title">
+                    <span>Company</span>
+                    <button class="side-panel-close" type="button" data-bs-toggle="collapse" data-bs-target="#drop-company" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <a href="growth_with_smith_2025.html" class="side-link">Growth with Smith 2025</a>
+                <a href="company.html" class="side-link">Company</a>
+                <a href="our-technology.html" class="side-link">Our Technology</a>
+                <a href="our-behaviors.html" class="side-link">Our Behaviors</a>
+                <a href="offices.html" class="side-link">Offices</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header class="top-nav fixed-top">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between" style="height:72px;">
+                    <a href="../index.html" class="brand d-inline-flex align-items-center text-decoration-none">
+                        <img src="../images/logos/logo.png" alt="Circana" class="brand-logo" >
+                    </a>
+
+                    <button class="nav-toggle d-lg-none icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <div class="nav-search d-none d-md-flex align-items-center flex-grow-1">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <input type="text" class="form-control nav-search-input" placeholder="Search" aria-label="Search">
+                    </div>
+
+                    <div class="nav-actions d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-contact">Contact Us</a>
+                        <button class="icon-btn" aria-label="Language/Region">
+                            <i class="bi bi-globe2"></i>
+                        </button>
+                        <button class="icon-btn" aria-label="Account">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile nav (collapsible) -->
+        <div id="mobileNav" class="mobile-menu collapse d-lg-none">
+            <nav class="mobile-links">
+                <a href="#" class="mobile-link mobile-cta"><i class="bi bi-chat-left-text"></i><span>Contact Us</span></a>
+                
+                <!-- Resources with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-resources" aria-expanded="false" aria-controls="mobile-resources">
+                        <i class="bi bi-layers"></i><span>Resources</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-resources" class="collapse mobile-submenu">
+                        <a href="../Resources/blog.html" class="mobile-sublink">Blog</a>
+                        <a href="../Resources/press-releases.html" class="mobile-sublink">Press Releases</a>
+                        <a href="../Resources/media-coverage.html" class="mobile-sublink">Media Coverage</a>
+                        <a href="../Resources/industry-rankings.html" class="mobile-sublink">Industry Rankings</a>
+                        <a href="../Resources/case-studies.html" class="mobile-sublink">Case Studies</a>
+                        <a href="../Resources/reports.html" class="mobile-sublink">Reports</a>
+                    </div>
+                </div>
+                
+                <!-- Industries with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-industries" aria-expanded="false" aria-controls="mobile-industries">
+                        <i class="bi bi-basket"></i><span>Industries</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-industries" class="collapse mobile-submenu">
+                        <a href="../industries/industry-alcoholic-beverages.html" class="mobile-sublink">Alcoholic Beverages</a>
+                        <a href="../industries/industry-apparel.html" class="mobile-sublink">Apparel</a>
+                        <a href="../industries/industry-appliances.html" class="mobile-sublink">Appliances</a>
+                        <a href="../industries/industry-automotive.html" class="mobile-sublink">Automotive</a>
+                        <a href="../industries/industry-b2b-technology.html" class="mobile-sublink">B2B Technology</a>
+                        <a href="../industries/industry-beauty.html" class="mobile-sublink">Beauty</a>
+                    </div>
+                </div>
+                
+                <!-- Solutions with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-solutions" aria-expanded="false" aria-controls="mobile-solutions">
+                        <i class="bi bi-grid-3x3-gap"></i><span>Solutions</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-solutions" class="collapse mobile-submenu">
+                        <a href="../solutions/market.html" class="mobile-sublink">Market</a>
+                        <a href="../solutions/consumer.html" class="mobile-sublink">Consumer</a>
+                        <a href="../solutions/view-all.html" class="mobile-sublink">View All</a>
+                    </div>
+                </div>
+                
+                <!-- Company with submenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-link mobile-link-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-company" aria-expanded="false" aria-controls="mobile-company">
+                        <i class="bi bi-house"></i><span>Company</span><i class="bi bi-chevron-down mobile-chevron"></i>
+                    </button>
+                    <div id="mobile-company" class="collapse mobile-submenu">
+                        <a href="growth_with_smith_2025.html" class="mobile-sublink">Growth with Smith 2025</a>
+                        <a href="company.html" class="mobile-sublink">Company</a>
+                        <a href="our-technology.html" class="mobile-sublink">Our Technology</a>
+                        <a href="our-behaviors.html" class="mobile-sublink">Our Behaviors</a>
+                        <a href="offices.html" class="mobile-sublink">Offices</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="mobile-social">
+                <a href="#" class="icon-btn" aria-label="Language/Region"><i class="bi bi-globe2"></i></a>
+                <a href="#" class="icon-btn" aria-label="Account"><i class="bi bi-person-circle"></i></a>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <section class="offices-hero" style="margin-top: 72px;">
+            <video class="offices-hero__video" autoplay muted loop playsinline preload="auto" webkit-playsinline>
+                <source src="../images/Our Behaviors.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="offices-hero__overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="offices-hero__content">
+                            <h1 class="offices-hero__title">
+                                <span class="offices-hero__title-line1">Global Knowledge.</span>
+                                <span class="offices-hero__title-line2">Local Experts.</span>
+                            </h1>
+                            <p class="offices-hero__description">Explore our global locations. With our corporate headquarters in Chicago, and offices conveniently located around the world, we have a strong presence in the areas that matter most to our clients and employees.</p>
+                            <div class="offices-hero__dropdown">
+                                <select class="form-select offices-select" aria-label="Select Country">
+                                    <option value="" selected>Select Country</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="brazil">Brazil</option>
+                                    <option value="china">China</option>
+                                    <option value="france">France</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="greece">Greece</option>
+                                    <option value="india">India</option>
+                                    <option value="ireland">Ireland</option>
+                                    <option value="italy">Italy</option>
+                                    <option value="japan">Japan</option>
+                                    <option value="mexico">Mexico</option>
+                                    <option value="netherlands">Netherlands</option>
+                                    <option value="new-zealand">New Zealand</option>
+                                    <option value="puerto-rico">Puerto Rico</option>
+                                    <option value="korea">Republic of Korea</option>
+                                    <option value="south-africa">South Africa</option>
+                                    <option value="spain">Spain</option>
+                                    <option value="usa">USA</option>
+                                    <option value="uk">United Kingdom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="offices-content py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Left Column - Chicago HQ -->
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <div class="office-hq">
+                            <div class="office-hq__image">
+                                <img src="../images/company/LaSalle.jpeg" alt="Chicago Skyline" class="img-fluid">
+                            </div>
+                            <div class="office-hq__content">
+                                <h2 class="office-hq__title">Circana HQ</h2>
+                                <div class="office-hq__location">Chicago</div>
+                                <div class="office-hq__address">
+                                    <p>203 North LaSalle Street,<br>Suite 1500<br>Chicago, IL</p>
+                                </div>
+                                <div class="office-hq__phone">
+                                    <a href="tel:+13127261221">+1.312.726.1221</a>
+                                </div>
+                                <div class="office-hq__actions">
+                                    <a href="#" class="btn btn-outline-light">Directions</a>
+                                    <a href="#" class="btn btn-light">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - International Offices Grid -->
+                    <div class="col-lg-8">
+                        <div class="offices-grid">
+                            <!-- Australia -->
+                            <div class="office-card" data-country="australia">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/au.png" alt="Australia Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Australia</div>
+                                </div>
+                                <h3 class="office-card__city">Melbourne</h3>
+                                <div class="office-card__address">
+                                    <p>Level 6, 574 St Kilda Rd<br>Melbourne, VIC 3004</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+61385275000">+61.3.8527.5000</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <div class="office-card" data-country="australia">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/au.png" alt="Australia Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Australia</div>
+                                </div>
+                                <h3 class="office-card__city">Sydney</h3>
+                                <div class="office-card__address">
+                                    <p>1 Homebush Bay Drive, Rhodes<br>Sydney, NSW 2138</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+61287894000">+61.2.8789.4000</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Brazil -->
+                            <div class="office-card" data-country="brazil">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/br.png" alt="Brazil Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Brazil</div>
+                                </div>
+                                <h3 class="office-card__city">São Paulo</h3>
+                                <div class="office-card__address">
+                                    <p>Alameda Santos, 1165 – Jardim Paulista<br>São Paulo, SP 01419-002</p>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- China -->
+                            <div class="office-card" data-country="china">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/cn.png" alt="China Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">China</div>
+                                </div>
+                                <h3 class="office-card__city">Hong Kong</h3>
+                                <div class="office-card__address">
+                                    <p>4/F Reception, Lee Garden Three,<br>1 Sunning Road, Causeway Bay<br>Hong Kong</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+85237696130">+852.3769.6130</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <div class="office-card" data-country="china">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/cn.png" alt="China Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">China</div>
+                                </div>
+                                <h3 class="office-card__city">Shanghai</h3>
+                                <div class="office-card__address">
+                                    <p>1568 Huashan Road, Cairui Bldg.<br>Shanghai 200052</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+862162755555">+86.21.6275.2555</a><br>
+                                    <a href="tel:+862162753222">+86.21.6275.3222</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- France -->
+                            <div class="office-card" data-country="france">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/fr.png" alt="France Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">France</div>
+                                </div>
+                                <h3 class="office-card__city">Paris</h3>
+                                <div class="office-card__address">
+                                    <p>1 bis Pl. de la Défense,<br>19 Av. de la Division Leclerc<br>Paris 92800 Puteaux</p>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Germany -->
+                            <div class="office-card" data-country="germany">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/de.png" alt="Germany Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Germany</div>
+                                </div>
+                                <h3 class="office-card__city">Düsseldorf</h3>
+                                <div class="office-card__address">
+                                    <p>Franz-Rennefeld-Weg 6<br>"ABC" Franz-Rennefeld-Weg 2-6<br>Düsseldorf 40472</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+4921154084400">+49.211.54084400</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <div class="office-card" data-country="germany">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/de.png" alt="Germany Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Germany</div>
+                                </div>
+                                <h3 class="office-card__city">München</h3>
+                                <div class="office-card__address">
+                                    <p>Theresienstraße 69<br>München 80333</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+4921154084400">+49.211.54084400</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <div class="office-card" data-country="germany">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/de.png" alt="Germany Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Germany</div>
+                                </div>
+                                <h3 class="office-card__city">Nürnberg</h3>
+                                <div class="office-card__address">
+                                    <p>KressengartenstrBe 4<br>Nürnberg 90402</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+4921154084400">+49.211.54084400</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Greece -->
+                            <div class="office-card" data-country="greece">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/gr.png" alt="Greece Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Greece</div>
+                                </div>
+                                <h3 class="office-card__city">Athens</h3>
+                                <div class="office-card__address">
+                                    <p>36 Pavlou Bakogianni Str<br>14451, Metamorphosis<br>Athens</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+302102787600">+30.210.27.87.600</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- India -->
+                            <div class="office-card" data-country="india">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/in.png" alt="India Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">India</div>
+                                </div>
+                                <h3 class="office-card__city">Bangalore</h3>
+                                <div class="office-card__address">
+                                    <p>6th floor, Plot No 77<br>SY No 150, EPIP Layout, Whitefield<br>Bangalore 560066</p>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <div class="office-card" data-country="india">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/in.png" alt="India Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">India</div>
+                                </div>
+                                <h3 class="office-card__city">Pune</h3>
+                                <div class="office-card__address">
+                                    <p>World Trade Center Tower 2<br>Village Kharadi, registration Sub District of Taluka Haveli district<br>Pune</p>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Ireland -->
+                            <div class="office-card" data-country="ireland">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/ie.png" alt="Ireland Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Ireland</div>
+                                </div>
+                                <h3 class="office-card__city">Athlone</h3>
+                                <div class="office-card__address">
+                                    <p>IDA Business and Technology Park,<br>Dublin Road, Garrycastle<br>Athlone, Co Westmeath</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+353906461301">+353.90.646.1301</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Italy -->
+                            <div class="office-card" data-country="italy">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/it.png" alt="Italy Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Italy</div>
+                                </div>
+                                <h3 class="office-card__city">Milan</h3>
+                                <div class="office-card__address">
+                                    <p>Viale Cassala, 22<br>Milan 20143</p>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Japan -->
+                            <div class="office-card" data-country="japan">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/jp.png" alt="Japan Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Japan</div>
+                                </div>
+                                <h3 class="office-card__city">Tokyo</h3>
+                                <div class="office-card__address">
+                                    <p>2F Biz Feel Tamachi<br>3-6-5 Shibaura, Minato-ku<br>Tokyo 108-0023</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+81357987663">+81.3.5798.7663</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Mexico -->
+                            <div class="office-card" data-country="mexico">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/mx.png" alt="Mexico Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Mexico</div>
+                                </div>
+                                <h3 class="office-card__city">Mexico City</h3>
+                                <div class="office-card__address">
+                                    <p>Lago Victória, 74, Piso 7,<br>Del. Miguel Hidalgo<br>Mexico City, C.P. 11520, México, D.F.</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+525552815069">+52.55.5281.5069</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Netherlands -->
+                            <div class="office-card" data-country="netherlands">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Netherlands</div>
+                                </div>
+                                <h3 class="office-card__city">Zaltbommel</h3>
+                                <div class="office-card__address">
+                                    <p>Wielkamp 3a<br>5301 DB Zaltbommel</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+310418570800">+31.0.418.570800</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- New Zealand -->
+                            <div class="office-card" data-country="new-zealand">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/nz.png" alt="New Zealand Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">New Zealand</div>
+                                </div>
+                                <h3 class="office-card__city">Auckland</h3>
+                                <div class="office-card__address">
+                                    <p>Level 2, Building C, Millennium Centre,<br>602 Great South Road, Ellerslie<br>Auckland 1051</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+6495265408">+64.9.526.5408</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Puerto Rico -->
+                            <div class="office-card" data-country="puerto-rico">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/pr.png" alt="Puerto Rico Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Puerto Rico</div>
+                                </div>
+                                <h3 class="office-card__city">San Juan</h3>
+                                <div class="office-card__address">
+                                    <p>Hato Rey<br>San Juan 00917</p>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Republic of Korea -->
+                            <div class="office-card" data-country="korea">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/kr.png" alt="Republic of Korea Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Republic of Korea</div>
+                                </div>
+                                <h3 class="office-card__city">Seoul</h3>
+                                <div class="office-card__address">
+                                    <p>2nd Floor, 343, Sapyeong-daero,<br>Seocho-gu<br>Seoul 06543</p>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- South Africa -->
+                            <div class="office-card" data-country="south-africa">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/za.png" alt="South Africa Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">South Africa</div>
+                                </div>
+                                <h3 class="office-card__city">Cape Town</h3>
+                                <div class="office-card__address">
+                                    <p>Aintree Park<br>Erf 159928, Kenilworth<br>Cape Town</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+27217007420">+27.21.700.7420</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <div class="office-card" data-country="south-africa">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/za.png" alt="South Africa Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">South Africa</div>
+                                </div>
+                                <h3 class="office-card__city">Johannesburg</h3>
+                                <div class="office-card__address">
+                                    <p>Office XD00004, Ground Floor<br>Silky Oak House 35 Ballyclare, Drive Bryanston<br>Johannesburg, Johannesburg Gauteng 2021</p>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- Spain -->
+                            <div class="office-card" data-country="spain">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/es.png" alt="Spain Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">Spain</div>
+                                </div>
+                                <h3 class="office-card__city">Madrid</h3>
+                                <div class="office-card__address">
+                                    <p>Calle Albasanz 15<br>Edif-A, 4ª Planta<br>Madrid 28037</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+34915488080">+34.91.548.80.80</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- USA -->
+                            <div class="office-card" data-country="usa">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">USA</div>
+                                </div>
+                                <h3 class="office-card__city">Chicago</h3>
+                                <div class="office-card__address">
+                                    <p>203 North LaSalle Street,<br>Suite 1500<br>Chicago, IL 60601</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+13127261221">+1.312.726.1221</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <div class="office-card" data-country="usa">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">USA</div>
+                                </div>
+                                <h3 class="office-card__city">New York</h3>
+                                <div class="office-card__address">
+                                    <p>31 Penn Plaza, 132 West 31st Street<br>17th Floor<br>New York, NY 10001</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+12125158731">+1.212.515.8731</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <div class="office-card" data-country="usa">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">USA</div>
+                                </div>
+                                <h3 class="office-card__city">Rogers</h3>
+                                <div class="office-card__address">
+                                    <p>593 Horsebarn Road<br>Suite 100<br>Rogers, AR 72758</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+13127261221">+1.312.726.1221</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <div class="office-card" data-country="usa">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">USA</div>
+                                </div>
+                                <h3 class="office-card__city">San Diego</h3>
+                                <div class="office-card__address">
+                                    <p>The Towers North, 5355 Mira Sorrento Place<br>Suite 650<br>San Diego, CA 92121</p>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+
+                            <!-- United Kingdom -->
+                            <div class="office-card" data-country="uk">
+                                <div class="office-card__header-info">
+                                    <div class="office-card__flag">
+                                        <img src="https://flagcdn.com/w40/gb.png" alt="United Kingdom Flag" class="flag-img">
+                                    </div>
+                                    <div class="office-card__country">United Kingdom</div>
+                                </div>
+                                <h3 class="office-card__city">Bracknell</h3>
+                                <div class="office-card__address">
+                                    <p>Maxis 1<br>Western Road<br>Bracknell, Berkshire RG12 1RT</p>
+                                </div>
+                                <div class="office-card__phone">
+                                    <a href="tel:+4401344746000">+44.0.1344.746000</a>
+                                </div>
+                                <a href="#" class="office-card__directions">
+                                    <i class="bi bi-compass"></i> Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="footer-brand">
+                            <img src="../images/logos/logo.png" alt="Circana" class="footer-logo" >
+                            <p class="footer-tag">Complexity into Clarity.</p>
+                            <p class="footer-copy">Circana transforms complexity into clarity with the most complete view of the consumer, inspiring actions that unlock business growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Insights</h5>
+                        <ul class="footer-list">
+                            <li><a href="../Resources/industry-rankings.html">Industry Rankings</a></li>
+                            <li><a href="../Resources/blog.html">Blog</a></li>
+                            <li><a href="../Resources/press-releases.html">Press Releases</a></li>
+                            <li><a href="#">Podcasts</a></li>
+                            <li><a href="../Resources/media-coverage.html">Media Coverage</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Entertainment Monthly Insights</a></li>
+                            <li><a href="#">Product Training</a></li>
+                            <li><a href="../Resources/reports.html">Reports</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Solutions</h5>
+                        <a href="#" class="selector-btn">Solution Selector</a>
+                        <ul class="footer-list mt-2">
+                            <li><a href="../solutions/market.html">Market</a></li>
+                            <li><a href="../solutions/consumer.html">Consumer</a></li>
+                            <li><a href="../solutions/view-all.html">View All</a></li>
+                        </ul>
+                        <h6 class="footer-sub mt-4">NCSolutions is now part of Circana</h6>
+                        <ul class="footer-list small">
+                            <li><a href="#">Services Privacy Statement</a></li>
+                            <li><a href="#">California Privacy Statement</a></li>
+                            <li><a href="#">Do Not Sell My Information</a></li>
+                            <li><a href="#">Request for Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Who we are</h5>
+                        <ul class="footer-list">
+                            <li><a href="growth_with_smith_2025.html">Growth with Smith 2025</a></li>
+                            <li><a href="our-behaviors.html">Our Behaviors</a></li>
+                            <li><a href="#">Culture of Inclusion and Belonging</a></li>
+                            <li><a href="#">Philanthropy</a></li>
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="offices.html">Offices</a></li>
+                        </ul>
+                        <h5 class="footer-title mt-3">Careers at Circana</h5>
+                        <ul class="footer-list">
+                            <li><a href="careers.html">Circana Careers</a></li>
+                            <li><a href="#">Job Openings</a></li>
+                            <li><a href="#">Fraud Alert</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© <span id="year"></span> Circana. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Close dropdown when any side-link is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideLinks = document.querySelectorAll('.side-link');
+            sideLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    // Find the parent collapse element and close it
+                    const collapseElement = this.closest('.collapse');
+                    if (collapseElement) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(collapseElement) || new bootstrap.Collapse(collapseElement);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+
+            // Ensure offices hero video plays
+            const officesVideo = document.querySelector('.offices-hero__video');
+            if (officesVideo) {
+                // Set video properties
+                officesVideo.muted = true;
+                officesVideo.loop = true;
+                officesVideo.playsInline = true;
+                
+                // Function to play video
+                function playOfficesVideo() {
+                    const playPromise = officesVideo.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then(function() {
+                            console.log('Offices video play() succeeded');
+                        }).catch(function(error) {
+                            console.log('Offices video play error:', error);
+                        });
+                    }
+                }
+
+                // Try to play immediately
+                playOfficesVideo();
+
+                // Try to play when video metadata is loaded
+                officesVideo.addEventListener('loadedmetadata', function() {
+                    playOfficesVideo();
+                });
+
+                // Try to play when video can start playing
+                officesVideo.addEventListener('canplay', function() {
+                    playOfficesVideo();
+                });
+
+                // Try to play when video data is loaded
+                officesVideo.addEventListener('loadeddata', function() {
+                    playOfficesVideo();
+                });
+
+                // Ensure video loops
+                officesVideo.addEventListener('ended', function() {
+                    officesVideo.currentTime = 0;
+                    playOfficesVideo();
+                });
+
+                // Try to play on user interaction if autoplay fails
+                let userInteractionHandler = null;
+                officesVideo.addEventListener('play', function() {
+                    // Video started playing, remove interaction handler
+                    if (userInteractionHandler) {
+                        document.removeEventListener('click', userInteractionHandler);
+                        document.removeEventListener('touchstart', userInteractionHandler);
+                        userInteractionHandler = null;
+                    }
+                });
+
+                // Add interaction handlers as fallback
+                userInteractionHandler = function() {
+                    playOfficesVideo();
+                };
+                document.addEventListener('click', userInteractionHandler, { once: true });
+                document.addEventListener('touchstart', userInteractionHandler, { once: true });
+
+                // Try playing after a short delay
+                setTimeout(function() {
+                    playOfficesVideo();
+                }, 500);
+            }
+
+            // Country filter functionality
+            const countrySelect = document.querySelector('.offices-select');
+            const officeCards = document.querySelectorAll('.office-card');
+            
+            if (countrySelect) {
+                countrySelect.addEventListener('change', function() {
+                    const selectedCountry = this.value;
+                    
+                    officeCards.forEach(function(card) {
+                        if (selectedCountry === '' || selectedCountry === 'Select Country') {
+                            card.style.display = '';
+                        } else {
+                            const cardCountry = card.getAttribute('data-country');
+                            if (cardCountry === selectedCountry) {
+                                card.style.display = '';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            }
+        });
+
+        // Contact Form Modal Functionality
+        const contactModal = document.getElementById('contactModal');
+        if (contactModal) {
+            const contactForm = document.getElementById('contactForm');
+            const contactFormSuccess = document.getElementById('contactFormSuccess');
+            const closeBtn = document.querySelector('.contact-modal-close');
+
+            // Open modal function
+            function openContactModal() {
+                contactModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Close modal function
+            function closeContactModal() {
+                contactModal.classList.remove('show');
+                document.body.style.overflow = '';
+                // Reset form after a delay
+                setTimeout(function() {
+                    contactForm.reset();
+                    contactForm.style.display = 'block';
+                    contactFormSuccess.classList.remove('show');
+                }, 300);
+            }
+
+            // Make closeContactModal available globally
+            window.closeContactModal = closeContactModal;
+
+            // Attach click handlers to all Contact Us buttons
+            // Only buttons with text "Contact Us" in the office actions area
+            const contactButtons = document.querySelectorAll('.btn-contact, .mobile-cta, .office-hq__actions .btn-light');
+            contactButtons.forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    // Only prevent default and open modal if it's a Contact Us button
+                    if (button.textContent.trim() === 'Contact Us' || button.classList.contains('btn-contact') || button.classList.contains('mobile-cta')) {
+                        e.preventDefault();
+                        openContactModal();
+                    }
+                });
+            });
+
+            // Close modal when clicking outside
+            contactModal.addEventListener('click', function(e) {
+                if (e.target === contactModal) {
+                    closeContactModal();
+                }
+            });
+
+            // Close modal with close button
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeContactModal);
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && contactModal.classList.contains('show')) {
+                    closeContactModal();
+                }
+            });
+
+            // Handle form submission
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = contactForm.querySelector('.contact-form-submit');
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+
+                    // Collect form data
+                    const formData = {
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        company: document.getElementById('company').value,
+                        subject: document.getElementById('subject').value,
+                        message: document.getElementById('message').value
+                    };
+
+                    // Simulate form submission (replace with actual API call)
+                    setTimeout(function() {
+                        contactForm.style.display = 'none';
+                        contactFormSuccess.classList.add('show');
+                        
+                        // Reset form after showing success
+                        setTimeout(function() {
+                            contactForm.reset();
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Send Message';
+                        }, 2000);
+                    }, 1500);
+                });
+            }
+        }
+    </script>
+    
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-content">
+            <div class="contact-modal-header">
+                <h2 class="contact-modal-title">Contact Us</h2>
+                <button class="contact-modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="contact-modal-body">
+                <form id="contactForm" class="contact-form">
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="firstName" class="contact-form-label">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" class="contact-form-input" required>
+                        </div>
+                        <div class="contact-form-group">
+                            <label for="lastName" class="contact-form-label">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" class="contact-form-input" required>
+                        </div>
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="email" class="contact-form-label">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" class="contact-form-input" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="phone" class="contact-form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="contact-form-input">
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="company" class="contact-form-label">Company Name</label>
+                        <input type="text" id="company" name="company" class="contact-form-input">
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="subject" class="contact-form-label">Subject <span class="required">*</span></label>
+                        <select id="subject" name="subject" class="contact-form-select" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="sales">Sales Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="media">Media Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="message" class="contact-form-label">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" class="contact-form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="contact-form-submit">Send Message</button>
+                </form>
+                <div id="contactFormSuccess" class="contact-form-success">
+                    <div class="contact-form-success-icon">✓</div>
+                    <h3 class="contact-form-success-title">Thank You!</h3>
+                    <p class="contact-form-success-message">We've received your message and will get back to you soon.</p>
+                    <button type="button" class="contact-form-submit" onclick="closeContactModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

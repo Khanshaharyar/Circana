@@ -1,0 +1,279 @@
+/* B2B Technology Hero Section */
+.b2b-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0 80px;
+    overflow: hidden;
+}
+
+.b2b-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&h=1080&fit=crop&q=80'); /* server room background */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px) brightness(0.35) saturate(0.8);
+    z-index: 0;
+    transform: scale(1.1);
+}
+
+.b2b-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.b2b-hero-header {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.b2b-hero-subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.b2b-hero-title {
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 28px;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.b2b-hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.b2b-content-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.b2b-content-text { display: flex; flex-direction: column; }
+
+.b2b-content-heading {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 22px;
+    line-height: 1.3;
+}
+
+.b2b-content-paragraph {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 28px;
+}
+
+.b2b-expert-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #5C2D8F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: flex-start;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 180px;
+}
+
+.b2b-expert-btn:hover {
+    background-color: #4a1f73;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(92, 45, 143, 0.3);
+}
+
+.b2b-content-image {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f3f3f5;
+    position: relative;
+}
+
+.b2b-content-image img { 
+    width: 100%; 
+    height: 100%; 
+    max-width: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .b2b-content-box { grid-template-columns: 1fr; padding: 40px; gap: 40px; }
+    .b2b-hero-title { font-size: 56px; }
+    .b2b-content-image { 
+        height: auto;
+        min-height: 350px;
+        max-height: 450px;
+    }
+    .b2b-content-image img {
+        height: auto;
+        min-height: 350px;
+        max-height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .b2b-hero { padding: 100px 0 60px; }
+    .b2b-hero-content { padding: 0 20px; }
+    .b2b-hero-title { font-size: 42px; }
+    .b2b-hero-description { font-size: 16px; }
+    .b2b-content-box { padding: 30px; }
+    .b2b-content-heading { font-size: 24px; }
+    .b2b-content-image { 
+        height: auto;
+        min-height: 300px;
+        max-height: 400px;
+    }
+    .b2b-content-image img {
+        height: auto;
+        min-height: 300px;
+        max-height: 400px;
+    }
+    .b2b-expert-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+        min-width: 160px;
+        width: 100%;
+        max-width: 300px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .b2b-hero-title { font-size: 36px; }
+    .b2b-hero-subtitle { font-size: 12px; }
+    .b2b-content-heading { font-size: 20px; }
+    .b2b-content-box { padding: 20px; }
+    .b2b-content-image { 
+        height: auto;
+        min-height: 250px;
+        max-height: 350px;
+    }
+    .b2b-content-image img {
+        height: auto;
+        min-height: 250px;
+        max-height: 350px;
+    }
+    .b2b-expert-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        min-width: 140px;
+        width: 100%;
+        max-width: 280px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .b2b-content-image { 
+        height: auto;
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .b2b-content-image img {
+        height: auto;
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .b2b-expert-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+        min-width: 120px;
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.4;
+    }
+}
+
+/* Benefits Section */
+.b2b-benefits { background: #3b0957; padding: 40px 0 60px; }
+.b2b-benefits-container { max-width: 925px; margin: 0 auto; background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 16px 36px rgba(0,0,0,.25); }
+.b2b-benefits-header { background: #e9e1ef; padding: 20px; text-align: center; }
+.b2b-benefits-title { margin: 0; font-size: 28px; font-weight: 800; color: #4a148c; }
+
+.b2b-benefits-body { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 34px 22px; gap: 20px; }
+.b2b-benefits-media { width: 320px; height: 260px; border-radius: 12px; overflow: hidden; background: #f3f3f5; box-shadow: 0 10px 26px rgba(0,0,0,.12); }
+.b2b-benefits-media img { width: 100%; height: 100%; max-width: 100%; object-fit: cover; display: block; }
+
+.b2b-benefits-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 28px; }
+.b2b-benefit-item { display: flex; align-items: center; gap: 12px; color: #3b0957; font-size: 16px; font-weight: 700; }
+.b2b-benefit-item i { color: #5C2D8F; font-size: 20px; }
+.b2b-benefits-left { justify-self: end; text-align: right; }
+.b2b-benefits-right { justify-self: start; }
+
+@media (max-width: 992px) {
+    .b2b-benefits-body { grid-template-columns: 1fr; text-align: left; }
+    .b2b-benefits-left, .b2b-benefits-right { justify-self: stretch; text-align: left; }
+    .b2b-benefits-media { 
+        width: 100%; 
+        height: auto;
+        min-height: 260px;
+        max-height: 400px;
+        order: -1; 
+    }
+    .b2b-benefits-media img {
+        height: auto;
+        min-height: 260px;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .b2b-benefits-media { 
+        min-height: 220px;
+        max-height: 350px;
+    }
+    .b2b-benefits-media img {
+        min-height: 220px;
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .b2b-benefits-media { 
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .b2b-benefits-media img {
+        min-height: 200px;
+        max-height: 300px;
+    }
+}
+
+

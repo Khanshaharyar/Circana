@@ -1,0 +1,794 @@
+/* Consumer Section Styles */
+
+.consumer-section {
+    background-color: #ffffff;
+    padding: 0;
+    width: 100%;
+}
+
+/* Image Column */
+.consumer-image-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.consumer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+}
+
+/* Content Column */
+.consumer-content {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-height: 600px;
+    background-color: #ffffff;
+}
+
+.consumer-heading {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #4a148c;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-subheading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #4a148c;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-description {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Features List */
+.consumer-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+}
+
+.consumer-features li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-features li i {
+    color: #4a148c;
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+.consumer-features li span {
+    flex: 1;
+}
+
+/* CTA Button */
+.consumer-cta-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #4a148c;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.consumer-cta-btn:hover {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.consumer-cta-btn:active {
+    transform: translateY(0);
+}
+
+/* Client Logos Section */
+.consumer-clients {
+    background-color: #ffffff;
+    padding: 60px 60px 80px;
+    text-align: center;
+}
+
+.consumer-clients-intro {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6b7280;
+    margin-bottom: 2.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-clients-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.consumer-clients .client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.consumer-clients .client-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.consumer-clients .client-logo svg {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1199.98px) {
+    .consumer-content {
+        padding: 60px 40px;
+    }
+    
+    .consumer-heading {
+        font-size: 3.5rem;
+    }
+    
+    .consumer-clients {
+        padding: 50px 40px 60px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .consumer-image-wrapper {
+        min-height: 400px;
+    }
+    
+    .consumer-content {
+        padding: 50px 30px;
+        min-height: auto;
+    }
+    
+    .consumer-heading {
+        font-size: 3rem;
+    }
+    
+    .consumer-subheading {
+        font-size: 1.25rem;
+    }
+    
+    .consumer-clients-logos {
+        gap: 2rem;
+    }
+    
+    .consumer-clients .client-logo svg {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .consumer-image-wrapper {
+        min-height: 300px;
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .consumer-image {
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .consumer-content {
+        padding: 40px 24px;
+    }
+    
+    .consumer-heading {
+        font-size: 2.5rem;
+    }
+    
+    .consumer-subheading {
+        font-size: 1.125rem;
+    }
+    
+    .consumer-description {
+        font-size: 1rem;
+    }
+    
+    .consumer-features li {
+        font-size: 1rem;
+    }
+    
+    .consumer-clients {
+        padding: 40px 24px 50px;
+    }
+    
+    .consumer-clients-logos {
+        gap: 1.5rem;
+    }
+    
+    .consumer-clients .client-logo svg {
+        max-width: 80px;
+    }
+}
+
+/* Track & Analyze Section */
+.track-analyze-section {
+    background-color: #f5f0f8;
+    padding: 80px 0;
+}
+
+.track-analyze-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a148c;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    line-height: 1.2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.track-analyze-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.track-analyze-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.track-analyze-icon {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.track-analyze-icon svg {
+    width: 64px;
+    height: 64px;
+}
+
+.track-analyze-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4a148c;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.track-analyze-card-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.track-analyze-card-description strong {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+/* Responsive Design for Track & Analyze Section */
+@media (max-width: 1199.98px) {
+    .track-analyze-heading {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .track-analyze-section {
+        padding: 60px 0;
+    }
+    
+    .track-analyze-heading {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .track-analyze-card {
+        padding: 2rem;
+    }
+    
+    .track-analyze-card-title {
+        font-size: 1.375rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .track-analyze-section {
+        padding: 50px 0;
+    }
+    
+    .track-analyze-heading {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .track-analyze-card {
+        padding: 1.75rem;
+    }
+    
+    .track-analyze-card-title {
+        font-size: 1.25rem;
+    }
+    
+    .track-analyze-card-description {
+        font-size: 0.9375rem;
+    }
+}
+
+/* Consumer Data Solutions Section */
+.consumer-data-solutions-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.consumer-data-solutions-heading {
+    font-size: 2.125rem;
+    font-weight: 700;
+    color: #4a148c;
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-data-solutions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.consumer-data-solution-item {
+    margin-bottom: 0;
+}
+
+.consumer-data-solution-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #4a148c;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-data-solution-description {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    line-height: 1.55;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-data-solutions-image-wrapper {
+    position: sticky;
+    top: 100px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    height: 1200px;
+    min-height: 1200px;
+    max-height: 1200px;
+}
+
+.consumer-data-solutions-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive Design for Consumer Data Solutions Section */
+@media (max-width: 1199.98px) {
+    .consumer-data-solutions-heading {
+        font-size: 1.95rem;
+    }
+    
+    .consumer-data-solutions-image-wrapper {
+        top: 80px;
+        height: auto;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .consumer-data-solutions-section {
+        padding: 60px 0;
+    }
+    
+    .consumer-data-solutions-heading {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .consumer-data-solutions-content {
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .consumer-data-solution-title {
+        font-size: 1.375rem;
+    }
+    
+    .consumer-data-solutions-image-wrapper {
+        position: relative;
+        top: 0;
+        max-width: 500px;
+        margin: 0 auto;
+        min-height: 420px;
+        max-height: none;
+        height: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .consumer-data-solutions-section {
+        padding: 50px 0;
+    }
+    
+    .consumer-data-solutions-heading {
+        font-size: 1.65rem;
+        margin-bottom: 2rem;
+    }
+    
+    .consumer-data-solutions-content {
+        gap: 1.75rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .consumer-data-solution-title {
+        font-size: 1.2rem;
+    }
+    
+    .consumer-data-solution-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Put Our Consumer Data Into Practice Section */
+.consumer-practice-section {
+    background-color: #f5f0f8;
+    padding: 0;
+    width: 100%;
+}
+
+.consumer-practice-image-wrapper {
+    width: 100%;
+    max-width: 573px;
+    height: 697px;
+    min-height: 697px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.consumer-practice-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.consumer-practice-content {
+    background-color: #ffffff;
+    padding: 10px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-height: 600px;
+}
+
+.consumer-practice-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a148c;
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-practice-item {
+    margin-bottom: 2.5rem;
+}
+
+.consumer-practice-item:last-child {
+    margin-bottom: 0;
+}
+
+.consumer-practice-item-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4a148c;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-practice-item-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Responsive Design for Consumer Practice Section */
+@media (max-width: 1199.98px) {
+    .consumer-practice-content {
+        padding: 60px 40px;
+    }
+    
+    .consumer-practice-heading {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .consumer-practice-image-wrapper {
+        max-width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .consumer-practice-image {
+        height: 100%;
+        min-height: 400px;
+    }
+
+    .consumer-practice-content {
+        padding: 50px 30px;
+        min-height: auto;
+    }
+
+    .consumer-practice-heading {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .consumer-practice-item {
+        margin-bottom: 2rem;
+    }
+
+    .consumer-practice-item-title {
+        font-size: 1.375rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .consumer-practice-image-wrapper {
+        max-width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .consumer-practice-image {
+        height: 100%;
+        min-height: 300px;
+    }
+
+    .consumer-practice-content {
+        padding: 40px 24px;
+    }
+
+    .consumer-practice-heading {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .consumer-practice-item {
+        margin-bottom: 1.75rem;
+    }
+
+    .consumer-practice-item-title {
+        font-size: 1.25rem;
+    }
+
+    .consumer-practice-item-description {
+        font-size: 0.9375rem;
+    }
+}
+
+/* Consumer Insights Section */
+.consumer-insights-section {
+    background-color: #050505;
+    padding: 90px 0;
+    color: #f5f5f5;
+}
+
+.consumer-insights-header {
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
+.consumer-insights-heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #f28a43;
+    margin: 0;
+    line-height: 1.2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.consumer-insights-grid {
+    margin-bottom: 2.5rem;
+}
+
+.insight-card {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 18px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.insight-card-image {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insight-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.insight-card-image.logo-card img {
+    width: 100%;
+}
+
+.insight-card-body {
+    padding: 1.75rem 1.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.insight-card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.insight-card-meta {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.insight-card-divider {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(242, 138, 67, 0) 0%, rgba(242, 138, 67, 0.9) 50%, rgba(242, 138, 67, 0) 100%);
+    margin: 0 1.75rem 1.5rem;
+}
+
+.consumer-insights-footer {
+    text-align: left;
+}
+
+.consumer-insights-link {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.consumer-insights-link::after {
+    content: '\2192';
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.consumer-insights-link:hover {
+    color: #f28a43;
+}
+
+.consumer-insights-link:hover::after {
+    transform: translateX(4px);
+}
+
+@media (max-width: 1199.98px) {
+    .consumer-insights-heading {
+        font-size: 2rem;
+    }
+
+    .insight-card-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .consumer-insights-section {
+        padding: 70px 0;
+    }
+
+    .consumer-insights-grid {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .consumer-insights-section {
+        padding: 60px 0;
+    }
+
+    .consumer-insights-header,
+    .consumer-insights-footer {
+        text-align: center;
+    }
+
+    .insight-card {
+        text-align: left;
+    }
+}
+
