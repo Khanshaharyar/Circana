@@ -191,9 +191,10 @@
                 <a href="#" class="icon-btn" aria-label="Language/Region"><i class="bi bi-globe2"></i></a>
                 <a href="#" class="icon-btn" aria-label="Account"><i class="bi bi-person-circle"></i></a>
             </div>
-            <div class="mobile-contact-footer">
-                <a href="#" class="mobile-link mobile-cta-small"><i class="bi bi-chat-left-text"></i><span>Contact Us</span></a>
-            </div>
+            <a href="#" class="mobile-contact-us-btn">
+                <i class="bi bi-chat-left-text"></i>
+                <span>Contact Us</span>
+            </a>
         </div>
 
         <!-- Consumer Section -->
@@ -498,6 +499,14 @@
             </div>
         </section>
 
+        <!-- Contact Us Button Section -->
+        <div class="contact-us-button-container">
+            <a href="#" class="contact-us-button">
+                <i class="bi bi-chat-left-text"></i>
+                <span>Contact Us</span>
+            </a>
+        </div>
+
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
@@ -673,7 +682,7 @@
             window.closeContactModal = closeContactModal;
 
             // Attach click handlers to all Contact Us buttons
-            const contactButtons = document.querySelectorAll('.btn-contact, .ready-btn-primary, .mobile-cta, .consumer-cta-btn');
+            const contactButtons = document.querySelectorAll('.btn-contact, .ready-btn-primary, .mobile-cta, .consumer-cta-btn, .contact-us-button, .mobile-contact-us-btn');
             contactButtons.forEach(function(button) {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();

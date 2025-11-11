@@ -146,6 +146,264 @@ body {
     color: var(--white);
 }
 
+/* Insights Highlight Section */
+.insights-section {
+    margin-top: 120px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.insight-slider-container {
+    position: relative;
+    padding-inline: 5rem;
+}
+
+.insight-slider {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0.5rem;
+    scrollbar-width: none;
+}
+
+.insight-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.insight-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    min-height: 320px;
+    min-width: clamp(450px, 45vw, 600px);
+    flex: 0 0 clamp(450px, 45vw, 600px);
+    padding: 2.5rem;
+    color: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.insight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.insight-card::after {
+    display: none;
+}
+
+.insight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.insight-card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.insight-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.02em;
+    color: white;
+}
+
+
+.insight-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-weight: 400;
+}
+
+
+.insight-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 0;
+}
+
+.insight-link i {
+    font-size: 1.1rem;
+}
+
+.insight-link:hover {
+    color: var(--pink-light);
+}
+
+.insight-arrow {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.98);
+    color: #4a148c;
+    box-shadow: 0 16px 40px rgba(26, 11, 46, 0.35),
+                0 4px 12px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(255, 255, 255, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    backdrop-filter: blur(10px);
+}
+
+.insight-arrow:hover:not(.disabled) {
+    transform: translateY(calc(-50% - 6px)) scale(1.1);
+    box-shadow: 0 20px 50px rgba(26, 11, 46, 0.45),
+                0 6px 16px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(74, 20, 140, 0.4);
+    background: #4a148c;
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.insight-arrow.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.insight-arrow i {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.insight-arrow-left {
+    left: 0.5rem;
+}
+
+.insight-arrow-right {
+    right: 0.5rem;
+}
+
+.card-holiday {
+    background-image: url('images/first-page/7th.avif');
+}
+
+.card-tariffs {
+    background-image: url('images/first-page/8th.avif');
+}
+
+.card-media {
+    background-image: url('images/banner/feature_banner_3.avif');
+}
+
+.card-growth {
+    background-image: url('images/banner/feature_banner_1.avif');
+}
+
+.card-retail {
+    background-image: url('images/banner/banner-1.jpg');
+}
+
+.card-consumer {
+    background-image: url('images/banner/feature_banner_2.avif');
+}
+
+@media (max-width: 991.98px) {
+    .insights-section {
+        margin-top: 60px;
+    }
+
+    .insight-card {
+        min-height: 300px;
+        padding: 2rem;
+        min-width: clamp(400px, 50vw, 550px);
+        flex: 0 0 clamp(400px, 50vw, 550px);
+    }
+
+    .insight-title {
+        font-size: 1.75rem;
+    }
+
+    .insight-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .insight-slider-container {
+        padding-inline: 3rem;
+    }
+
+    .insight-card {
+        min-height: 280px;
+        padding: 1.75rem;
+        min-width: 320px;
+        flex: 0 0 320px;
+        border-radius: 20px;
+    }
+
+    .insight-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .insight-text {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .insight-arrow {
+        width: 56px;
+        height: 56px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .insight-arrow:hover:not(.disabled) {
+        transform: translateY(calc(-50% - 4px)) scale(1.05);
+    }
+
+    .insight-arrow i {
+        font-size: 1.5rem;
+    }
+
+    .insight-arrow-left {
+        left: 0.25rem;
+    }
+
+    .insight-arrow-right {
+        right: 0.25rem;
+    }
+}
+
 /* Hero Image - Stacked Cards */
 .hero-image {
     position: relative;
@@ -342,31 +600,43 @@ body.mobile-menu-open::before {
 /* Mobile menu close button */
 .mobile-menu-close {
     position: absolute;
-    top: 4px;
-    right: 6px;
-    width: 28px;
-    height: 28px;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
     border: none;
-    background: rgba(74, 20, 140, 0.1);
+    background: linear-gradient(180deg, #f2eff8, #f5eef7);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 1051;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0;
+    box-shadow: 0 2px 8px rgba(74, 20, 140, 0.15);
 }
 
 .mobile-menu-close:hover {
-    background: rgba(74, 20, 140, 0.2);
-    transform: scale(1.1);
+    background: linear-gradient(180deg, #e8dff0, #ede5f0);
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 4px 12px rgba(74, 20, 140, 0.25);
+}
+
+.mobile-menu-close:active {
+    transform: scale(0.95) rotate(90deg);
 }
 
 .mobile-menu-close i {
-    font-size: 18px;
+    font-size: 20px;
     color: #4a148c;
     line-height: 1;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-close:hover i {
+    color: #6a1b9a;
 }
 
 /* Ensure mobile menu displays correctly when shown */
@@ -497,6 +767,81 @@ body.mobile-menu-open::before {
     border-top: 1px solid rgba(74, 20, 140, 0.15);
     margin-top: 8px;
     text-align: center;
+}
+
+/* Mobile Contact Us Button */
+.mobile-contact-us-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: calc(60% - 42px);
+    margin: 0 auto 20px auto;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    border: 1.5px solid #4a148c;
+    border-radius: 28px;
+    color: #4a148c;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s 
+cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(74, 20, 140, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-contact-us-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(74, 20, 140, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.mobile-contact-us-btn:hover::before {
+    left: 100%;
+}
+
+.mobile-contact-us-btn:hover {
+    background-color: #f5f0fb;
+    border-color: #6a1b9a;
+    color: #6a1b9a;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(74, 20, 140, 0.25);
+}
+
+.mobile-contact-us-btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 8px rgba(74, 20, 140, 0.15);
+}
+
+.mobile-contact-us-btn i {
+    font-size: 1.15rem;
+    color: #4a148c;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.mobile-contact-us-btn:hover i {
+    color: #6a1b9a;
+    transform: scale(1.1);
+}
+
+.mobile-contact-us-btn span {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.mobile-contact-us-btn:hover span {
+    letter-spacing: 0.3px;
 }
 
 .mobile-link.mobile-cta-small {
@@ -1534,10 +1879,10 @@ body.mobile-menu-open::before {
 
 .insight-title {
     margin-top: 6px;
-    color: #2b1b3b;
-    font-weight: 700;
+    color: white;
+    font-weight: 800;
     line-height: 1.4;
-    font-size: 18px;
+    font-size: 21px;
 }
 
 @media (max-width: 768px) {
@@ -4045,4 +4390,61 @@ table {
 .ready-btn-primary,
 .mobile-cta {
     cursor: pointer;
+}
+
+/* Contact Us Button - Image Style */
+.contact-us-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background-color: #ffffff;
+    border: 1px solid #4a148c;
+    border-radius: 8px;
+    color: #4a148c;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(74, 20, 140, 0.1);
+    white-space: nowrap;
+}
+
+.contact-us-button:hover {
+    background-color: #f5f0fb;
+    border-color: #6a1b9a;
+    color: #6a1b9a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 20, 140, 0.15);
+}
+
+.contact-us-button i {
+    font-size: 1.1rem;
+    color: #4a148c;
+}
+
+.contact-us-button:hover i {
+    color: #6a1b9a;
+}
+
+.contact-us-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .contact-us-button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-us-button-container {
+        padding: 20px 0;
+        margin-top: 30px;
+    }
 }

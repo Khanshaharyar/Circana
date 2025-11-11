@@ -118,8 +118,10 @@
 
         <!-- Mobile nav (collapsible) -->
         <div id="mobileNav" class="mobile-menu collapse d-lg-none">
+            <button class="mobile-menu-close" type="button" aria-label="Close menu">
+                <i class="bi bi-x"></i>
+            </button>
             <nav class="mobile-links">
-                <a href="#" class="mobile-link mobile-cta"><i class="bi bi-chat-left-text"></i><span>Contact Us</span></a>
                 
                 <!-- Resources with submenu -->
                 <div class="mobile-menu-item">
@@ -181,6 +183,10 @@
                 <a href="#" class="icon-btn" aria-label="Language/Region"><i class="bi bi-globe2"></i></a>
                 <a href="#" class="icon-btn" aria-label="Account"><i class="bi bi-person-circle"></i></a>
             </div>
+            <a href="#" class="mobile-contact-us-btn">
+                <i class="bi bi-chat-left-text"></i>
+                <span>Contact Us</span>
+            </a>
         </div>
 
         <section class="section" style="padding-top: 120px; padding-bottom: 40px;">
@@ -192,6 +198,14 @@
                 <p class="lead" style="max-width: 800px;">Overview and insights for the Beauty industry. Replace this with your content.</p>
             </div>
         </section>
+
+        <!-- Contact Us Button Section -->
+        <div class="contact-us-button-container">
+            <a href="#" class="contact-us-button">
+                <i class="bi bi-chat-left-text"></i>
+                <span>Contact Us</span>
+            </a>
+        </div>
 
         <footer class="site-footer">
             <div class="container">
@@ -322,13 +336,56 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         // Initialize EmailJS
-        (function(){
-            emailjs.init("CKYUSJWCHRXIC9j-E");
+        (function() {
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init("CKYUSJWCHRXIC9j-E");
+            } else {
+                window.addEventListener('load', function() {
+                    if (typeof emailjs !== 'undefined') {
+                        emailjs.init("CKYUSJWCHRXIC9j-E");
+                    }
+                });
+            }
         })();
     </script>
+    <!-- Contact Form Script -->
+    <script src="../contact-form-script.js"></script>
     <script>
         // Close all dropdowns on page load
         document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu backdrop toggle
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav) {
+                // Close button functionality
+                const closeButton = mobileNav.querySelector('.mobile-menu-close');
+                if (closeButton) {
+                    closeButton.addEventListener('click', function() {
+                        const bsCollapse = bootstrap.Collapse.getInstance(mobileNav);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    });
+                }
+                
+                mobileNav.addEventListener('show.bs.collapse', function() {
+                    document.body.classList.add('mobile-menu-open');
+                });
+                mobileNav.addEventListener('hide.bs.collapse', function() {
+                    document.body.classList.remove('mobile-menu-open');
+                });
+                // Close menu when clicking backdrop (clicking outside the menu)
+                document.addEventListener('click', function(e) {
+                    if (document.body.classList.contains('mobile-menu-open')) {
+                        if (!mobileNav.contains(e.target) && !e.target.closest('.nav-toggle')) {
+                            const bsCollapse = bootstrap.Collapse.getInstance(mobileNav);
+                            if (bsCollapse) {
+                                bsCollapse.hide();
+                            }
+                        }
+                    }
+                });
+            }
+            
             // Close all open dropdowns
             const allCollapses = document.querySelectorAll('#sideAccordion .collapse');
             allCollapses.forEach(function(collapse) {
@@ -352,100 +409,139 @@
 
             // Contact Form Modal Functionality
             const contactModal = document.getElementById('contactModal');
-            const contactForm = document.getElementById('contactForm');
-            const contactFormSuccess = document.getElementById('contactFormSuccess');
-            const closeBtn = document.querySelector('.contact-modal-close');
+            if (contactModal) {
+                const contactForm = document.getElementById('contactForm');
+                const contactFormSuccess = document.getElementById('contactFormSuccess');
+                const closeBtn = document.querySelector('.contact-modal-close');
 
-            function openContactModal() {
-                contactModal.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeContactModal() {
-                contactModal.classList.remove('show');
-                document.body.style.overflow = '';
-                setTimeout(function() {
-                    contactForm.reset();
-                    contactForm.style.display = 'block';
-                    contactFormSuccess.classList.remove('show');
-                }, 300);
-            }
-
-            window.closeContactModal = closeContactModal;
-
-            const contactButtons = document.querySelectorAll('.btn-contact, .ready-btn-primary, .mobile-cta');
-            contactButtons.forEach(function(button) {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    openContactModal();
-                });
-            });
-
-            contactModal.addEventListener('click', function(e) {
-                if (e.target === contactModal) {
-                    closeContactModal();
+                // Open modal function
+                function openContactModal() {
+                    contactModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
                 }
-            });
 
-            closeBtn.addEventListener('click', closeContactModal);
-
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && contactModal.classList.contains('show')) {
-                    closeContactModal();
+                // Close modal function
+                function closeContactModal() {
+                    contactModal.classList.remove('show');
+                    document.body.style.overflow = '';
+                    setTimeout(function() {
+                        if (contactForm) {
+                            contactForm.reset();
+                            contactForm.style.display = 'block';
+                        }
+                        if (contactFormSuccess) {
+                            contactFormSuccess.classList.remove('show');
+                        }
+                    }, 300);
                 }
-            });
 
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const submitBtn = contactForm.querySelector('.contact-form-submit');
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Sending...';
+                // Make closeContactModal available globally
+                window.closeContactModal = closeContactModal;
+                window.openContactModal = openContactModal;
 
-                // Collect form data
-                const formData = {
-                    firstName: document.getElementById('firstName').value,
-                    lastName: document.getElementById('lastName').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value || 'Not provided',
-                    company: document.getElementById('company').value || 'Not provided',
-                    subject: document.getElementById('subject').value,
-                    message: document.getElementById('message').value
-                };
-
-                // EmailJS configuration
-                const serviceId = 'service_e2w7kzo';
-                const templateId = 'template_7i4in4n';
-                
-                // Prepare template parameters for EmailJS
-                const templateParams = {
-                    from_name: `${formData.firstName} ${formData.lastName}`,
-                    from_email: formData.email,
-                    phone: formData.phone,
-                    company: formData.company,
-                    subject: formData.subject,
-                    message: formData.message,
-                    to_email: 'khanshaharyar083@gmail.com'
-                };
-
-                // Send email using EmailJS
-                emailjs.send(serviceId, templateId, templateParams)
-                    .then(function(response) {
-                        // Success
-                        contactForm.style.display = 'none';
-                        contactFormSuccess.classList.add('show');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Send Message';
-                        contactForm.reset();
-                    })
-                    .catch(function(error) {
-                        // Error handling
-                        console.error('Email sending failed:', error);
-                        alert('Sorry, there was an error sending your message. Please try again later.');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Send Message';
+                // Attach click handlers to all Contact Us buttons
+                const contactButtons = document.querySelectorAll('.btn-contact, .ready-btn-primary, .mobile-cta, .contact-us-button, .mobile-contact-us-btn');
+                contactButtons.forEach(function(button) {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        openContactModal();
                     });
-            });
+                });
+
+                // Close modal when clicking outside
+                contactModal.addEventListener('click', function(e) {
+                    if (e.target === contactModal) {
+                        closeContactModal();
+                    }
+                });
+
+                // Close modal with close button
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', closeContactModal);
+                }
+
+                // Close modal with Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && contactModal.classList.contains('show')) {
+                        closeContactModal();
+                    }
+                });
+
+                // Handle form submission
+                if (contactForm) {
+                    contactForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        const submitBtn = contactForm.querySelector('.contact-form-submit');
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Sending...';
+
+                        // Collect form data
+                        const formData = {
+                            firstName: document.getElementById('firstName').value,
+                            lastName: document.getElementById('lastName').value,
+                            email: document.getElementById('email').value,
+                            phone: document.getElementById('phone').value || 'Not provided',
+                            company: document.getElementById('company').value || 'Not provided',
+                            subject: document.getElementById('subject').value,
+                            message: document.getElementById('message').value
+                        };
+
+                        // EmailJS configuration
+                        const serviceId = 'service_e2w7kzo';
+                        const templateId = 'template_7i4in4n';
+                        const publicKey = 'CKYUSJWCHRXIC9j-E';
+                        
+                        // Ensure EmailJS is initialized
+                        if (typeof emailjs === 'undefined') {
+                            alert('Email service is not loaded. Please refresh the page and try again.');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Send Message';
+                            return;
+                        }
+
+                        // Initialize if not already done
+                        try {
+                            emailjs.init(publicKey);
+                        } catch(e) {
+                            // Already initialized, continue
+                        }
+                        
+                        // Prepare template parameters for EmailJS
+                        const templateParams = {
+                            from_name: `${formData.firstName} ${formData.lastName}`,
+                            from_email: formData.email,
+                            phone: formData.phone || 'Not provided',
+                            company: formData.company || 'Not provided',
+                            subject: formData.subject,
+                            message: formData.message,
+                            to_email: 'khanshaharyar083@gmail.com'
+                        };
+
+                        // Send email using EmailJS
+                        emailjs.send(serviceId, templateId, templateParams)
+                            .then(function(response) {
+                                // Success
+                                contactForm.style.display = 'none';
+                                contactFormSuccess.classList.add('show');
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = 'Send Message';
+                                contactForm.reset();
+                            })
+                            .catch(function(error) {
+                                // Error handling
+                                console.error('EmailJS Error Details:', {
+                                    status: error.status,
+                                    text: error.text,
+                                    error: error
+                                });
+                                alert('Sorry, there was an error sending your message. Please check the console for details or try again later.');
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = 'Send Message';
+                            });
+                    });
+                }
+            }
         });
     </script>
 </body>

@@ -127,8 +127,10 @@
 
         <!-- Mobile nav (collapsible) -->
         <div id="mobileNav" class="mobile-menu collapse d-lg-none">
+            <button class="mobile-menu-close" type="button" aria-label="Close menu">
+                <i class="bi bi-x"></i>
+            </button>
             <nav class="mobile-links">
-                <a href="#" class="mobile-link mobile-cta"><i class="bi bi-chat-left-text"></i><span>Contact Us</span></a>
                 
                 <!-- Resources with submenu -->
                 <div class="mobile-menu-item">
@@ -190,6 +192,10 @@
                 <a href="#" class="icon-btn" aria-label="Language/Region"><i class="bi bi-globe2"></i></a>
                 <a href="#" class="icon-btn" aria-label="Account"><i class="bi bi-person-circle"></i></a>
             </div>
+            <a href="#" class="mobile-contact-us-btn">
+                <i class="bi bi-chat-left-text"></i>
+                <span>Contact Us</span>
+            </a>
         </div>
 
         <!-- Page Content -->
@@ -797,6 +803,14 @@
             </div>
         </section>
 
+        <!-- Contact Us Button Section -->
+        <div class="contact-us-button-container">
+            <a href="#" class="contact-us-button">
+                <i class="bi bi-chat-left-text"></i>
+                <span>Contact Us</span>
+            </a>
+        </div>
+
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
@@ -866,6 +880,39 @@
     <script>
         // Close dropdown when any side-link is clicked
         document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu backdrop toggle
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav) {
+                // Close button functionality
+                const closeButton = mobileNav.querySelector('.mobile-menu-close');
+                if (closeButton) {
+                    closeButton.addEventListener('click', function() {
+                        const bsCollapse = bootstrap.Collapse.getInstance(mobileNav);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    });
+                }
+                
+                mobileNav.addEventListener('show.bs.collapse', function() {
+                    document.body.classList.add('mobile-menu-open');
+                });
+                mobileNav.addEventListener('hide.bs.collapse', function() {
+                    document.body.classList.remove('mobile-menu-open');
+                });
+                // Close menu when clicking backdrop (clicking outside the menu)
+                document.addEventListener('click', function(e) {
+                    if (document.body.classList.contains('mobile-menu-open')) {
+                        if (!mobileNav.contains(e.target) && !e.target.closest('.nav-toggle')) {
+                            const bsCollapse = bootstrap.Collapse.getInstance(mobileNav);
+                            if (bsCollapse) {
+                                bsCollapse.hide();
+                            }
+                        }
+                    }
+                });
+            }
+            
             const sideLinks = document.querySelectorAll('.side-link');
             sideLinks.forEach(function(link) {
                 link.addEventListener('click', function() {
@@ -1000,7 +1047,7 @@
 
             // Attach click handlers to all Contact Us buttons
             // Only buttons with text "Contact Us" in the office actions area
-            const contactButtons = document.querySelectorAll('.btn-contact, .mobile-cta, .office-hq__actions .btn-light');
+            const contactButtons = document.querySelectorAll('.btn-contact, .mobile-cta, .office-hq__actions .btn-light, .contact-us-button, .mobile-contact-us-btn');
             contactButtons.forEach(function(button) {
                 button.addEventListener('click', function(e) {
                     // Only prevent default and open modal if it's a Contact Us button
