@@ -496,9 +496,18 @@
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        // Initialize EmailJS
+        // Initialize EmailJS - wait for it to load
         (function(){
-            emailjs.init("CKYUSJWCHRXIC9j-E");
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init("CKYUSJWCHRXIC9j-E");
+            } else {
+                // Wait for EmailJS to load
+                window.addEventListener('load', function() {
+                    if (typeof emailjs !== 'undefined') {
+                        emailjs.init("CKYUSJWCHRXIC9j-E");
+                    }
+                });
+            }
         })();
     </script>
     <script>
@@ -555,117 +564,158 @@
             const contactFormSuccess = document.getElementById('contactFormSuccess');
             const closeBtn = document.querySelector('.contact-modal-close');
 
+            // Open modal function
             function openContactModal() {
-                contactModal.classList.add('show');
-                document.body.style.overflow = 'hidden';
+                const modal = document.getElementById('contactModal');
+                if (modal) {
+                    console.log('Opening modal...');
+                    modal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    console.error('Contact modal not found!');
+                }
             }
 
+            // Close modal function
             function closeContactModal() {
-                contactModal.classList.remove('show');
-                document.body.style.overflow = '';
-                setTimeout(function() {
-                    contactForm.reset();
-                    contactForm.style.display = 'block';
-                    contactFormSuccess.classList.remove('show');
-                }, 300);
+                const modal = document.getElementById('contactModal');
+                const form = document.getElementById('contactForm');
+                const success = document.getElementById('contactFormSuccess');
+                if (modal) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = '';
+                    setTimeout(function() {
+                        if (form) {
+                            form.reset();
+                            form.style.display = 'block';
+                        }
+                        if (success) {
+                            success.classList.remove('show');
+                        }
+                    }, 300);
+                }
             }
 
+            // Make functions available globally
             window.closeContactModal = closeContactModal;
+            window.openContactModal = openContactModal;
 
-            const contactButtons = document.querySelectorAll('.btn-contact, .ready-btn-primary, .mobile-cta, .contact-us-button, .mobile-contact-us-btn');
-            contactButtons.forEach(function(button) {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    openContactModal();
+            if (!contactModal || !contactForm) {
+                console.error('Contact form elements not found');
+            } else {
+                console.log('Contact form elements found, setting up event listeners...');
+
+                // Use event delegation to handle all contact button clicks
+                // This works for buttons and nested elements (icons, spans) inside them
+                document.addEventListener('click', function(e) {
+                    const target = e.target;
+                    const button = target.closest('.btn-contact, .ready-btn-primary, .mobile-cta, .contact-us-button, .mobile-contact-us-btn');
+                    
+                    if (button) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Contact button clicked, opening modal...', button, target);
+                        openContactModal();
+                        return false;
+                    }
                 });
-            });
-
-            contactModal.addEventListener('click', function(e) {
-                if (e.target === contactModal) {
-                    closeContactModal();
-                }
-            });
-
-            closeBtn.addEventListener('click', closeContactModal);
-
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && contactModal.classList.contains('show')) {
-                    closeContactModal();
-                }
-            });
-
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
                 
-                const submitBtn = contactForm.querySelector('.contact-form-submit');
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Sending...';
+                // Log found buttons for debugging
+                const contactButtons = document.querySelectorAll('.btn-contact, .ready-btn-primary, .mobile-cta, .contact-us-button, .mobile-contact-us-btn');
+                console.log('Found contact buttons:', contactButtons.length, contactButtons);
 
-                // Collect form data
-                const formData = {
-                    firstName: document.getElementById('firstName').value,
-                    lastName: document.getElementById('lastName').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value || 'Not provided',
-                    company: document.getElementById('company').value || 'Not provided',
-                    subject: document.getElementById('subject').value,
-                    message: document.getElementById('message').value
-                };
-
-                // EmailJS configuration
-                const serviceId = 'service_e2w7kzo';
-                const templateId = 'template_7i4in4n';
-                
-                // Prepare template parameters for EmailJS
-                const templateParams = {
-                    from_name: `${formData.firstName} ${formData.lastName}`,
-                    from_email: formData.email,
-                    phone: formData.phone,
-                    company: formData.company,
-                    subject: formData.subject,
-                    message: formData.message,
-                    to_email: 'khanshaharyar083@gmail.com'
-                };
-
-                // Send email using EmailJS
-                emailjs.send(serviceId, templateId, templateParams)
-                    .then(function(response) {
-                        // Success
-                        contactForm.style.display = 'none';
-                        contactFormSuccess.classList.add('show');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Send Message';
-                        contactForm.reset();
-                    })
-                    .catch(function(error) {
-                        // Error handling
-                        console.error('Email sending failed:', error);
-                        alert('Sorry, there was an error sending your message. Please try again later.');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Send Message';
-                    });
-            });
-            
-            // Mobile menu backdrop toggle and close button
-            const mobileNav = document.getElementById('mobileNav');
-            if (mobileNav) {
-                // Close button functionality
-                const closeButton = mobileNav.querySelector('.mobile-menu-close');
-                if (closeButton) {
-                    closeButton.addEventListener('click', function() {
-                        const bsCollapse = bootstrap.Collapse.getInstance(mobileNav);
-                        if (bsCollapse) {
-                            bsCollapse.hide();
+                if (contactModal) {
+                    contactModal.addEventListener('click', function(e) {
+                        if (e.target === contactModal) {
+                            closeContactModal();
                         }
                     });
                 }
-                
-                mobileNav.addEventListener('show.bs.collapse', function() {
-                    document.body.classList.add('mobile-menu-open');
+
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', closeContactModal);
+                }
+
+                document.addEventListener('keydown', function(e) {
+                    const modal = document.getElementById('contactModal');
+                    if (e.key === 'Escape' && modal && modal.classList.contains('show')) {
+                        closeContactModal();
+                    }
                 });
-                mobileNav.addEventListener('hide.bs.collapse', function() {
-                    document.body.classList.remove('mobile-menu-open');
-                });
+
+                if (contactForm) {
+                    contactForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        const submitBtn = contactForm.querySelector('.contact-form-submit');
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Sending...';
+
+                        // Collect form data
+                        const formData = {
+                            firstName: document.getElementById('firstName').value,
+                            lastName: document.getElementById('lastName').value,
+                            email: document.getElementById('email').value,
+                            phone: document.getElementById('phone').value || 'Not provided',
+                            company: document.getElementById('company').value || 'Not provided',
+                            subject: document.getElementById('subject').value,
+                            message: document.getElementById('message').value
+                        };
+
+                        // EmailJS configuration
+                        const serviceId = 'service_e2w7kzo';
+                        const templateId = 'template_7i4in4n';
+                        const publicKey = 'CKYUSJWCHRXIC9j-E';
+                        
+                        // Ensure EmailJS is loaded and initialized
+                        if (typeof emailjs === 'undefined') {
+                            alert('Email service is not loaded. Please refresh the page and try again.');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Send Message';
+                            return;
+                        }
+
+                        // Initialize EmailJS if not already done
+                        try {
+                            emailjs.init(publicKey);
+                        } catch(e) {
+                            // Already initialized, continue
+                        }
+                        
+                        // Prepare template parameters for EmailJS
+                        const templateParams = {
+                            from_name: `${formData.firstName} ${formData.lastName}`,
+                            from_email: formData.email,
+                            phone: formData.phone || 'Not provided',
+                            company: formData.company || 'Not provided',
+                            subject: formData.subject,
+                            message: formData.message,
+                            to_email: 'khanshaharyar083@gmail.com'
+                        };
+
+                        // Send email using EmailJS
+                        emailjs.send(serviceId, templateId, templateParams)
+                            .then(function(response) {
+                                // Success
+                                contactForm.style.display = 'none';
+                                contactFormSuccess.classList.add('show');
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = 'Send Message';
+                                contactForm.reset();
+                            })
+                            .catch(function(error) {
+                                // Error handling
+                                console.error('EmailJS Error Details:', {
+                                    status: error.status,
+                                    text: error.text,
+                                    error: error
+                                });
+                                alert('Sorry, there was an error sending your message. Please check the console for details or try again later.');
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = 'Send Message';
+                            });
+                    });
+                }
             }
         });
     </script>

@@ -19,12 +19,19 @@ function openContactModal() {
                 retryModal.classList.add('show');
                 document.body.style.overflow = 'hidden';
             } else {
-                // If still not found, try one more time
-                setTimeout(function() {
+                // If still not found, try multiple times with increasing delays
+                let attempts = 0;
+                const maxAttempts = 10;
+                const checkModal = setInterval(function() {
+                    attempts++;
                     const finalModal = document.getElementById('contactModal');
                     if (finalModal) {
                         finalModal.classList.add('show');
                         document.body.style.overflow = 'hidden';
+                        clearInterval(checkModal);
+                    } else if (attempts >= maxAttempts) {
+                        console.error('Contact modal could not be found after multiple attempts');
+                        clearInterval(checkModal);
                     }
                 }, 200);
             }
@@ -61,13 +68,23 @@ function initContactButtons() {
                 button = target;
                 break;
             }
+            // Also check if it's a link or button inside a contact button container
+            if (target.tagName === 'A' || target.tagName === 'BUTTON') {
+                const parent = target.closest('.btn-contact, .ready-btn-primary, .mobile-cta, .mobile-cta-small, .contact-us-button, .mobile-contact-us-btn');
+                if (parent) {
+                    button = parent;
+                    break;
+                }
+            }
             target = target.parentElement;
         }
         
         if (button) {
             e.preventDefault();
             e.stopPropagation();
+            console.log('Contact button clicked, opening modal...', button);
             openContactModal();
+            return false;
         }
     });
 }
