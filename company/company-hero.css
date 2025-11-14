@@ -194,10 +194,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 75vh;
+    min-height: 85vh;
     overflow: hidden;
     color: #ffffff;
     text-align: center;
+    background: #050308;
 }
 
 .company-identity__media {
@@ -205,51 +206,291 @@
     inset: 0;
     background: url("../images/company/company-2.jpg") center/cover no-repeat;
     transform: scale(1.02);
-    z-index: -2;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.company-identity__led-screen {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(5, 3, 8, 0.95) 0%, rgba(8, 6, 23, 0.98) 100%);
+    z-index: 1;
+}
+
+.company-identity__led-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(136, 70, 255, 0.15) 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, rgba(255, 71, 173, 0.15) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(98, 162, 255, 0.1) 1px, transparent 1px);
+    background-size: 60px 60px, 80px 80px, 100px 100px;
+    background-position: 0 0, 30px 30px, 15px 15px;
+    opacity: 0.6;
+    animation: ledPulse 4s ease-in-out infinite;
+}
+
+@keyframes ledPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
 }
 
 .company-identity__overlay {
     position: absolute;
     inset: 0;
-    background: rgba(8, 6, 23, 0.65);
-    z-index: -1;
+    background: linear-gradient(
+        180deg,
+        rgba(5, 3, 8, 0.85) 0%,
+        rgba(8, 6, 23, 0.9) 50%,
+        rgba(5, 3, 8, 0.95) 100%
+    );
+    z-index: 2;
+}
+
+.company-identity__lighting {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.company-identity__spotlight {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: spotlightMove 8s ease-in-out infinite;
+}
+
+.company-identity__spotlight--1 {
+    top: 10%;
+    left: 15%;
+    background: radial-gradient(circle, rgba(136, 70, 255, 0.8), transparent 70%);
+    animation-delay: 0s;
+}
+
+.company-identity__spotlight--2 {
+    top: 20%;
+    right: 20%;
+    background: radial-gradient(circle, rgba(255, 71, 173, 0.7), transparent 70%);
+    animation-delay: 2s;
+}
+
+.company-identity__spotlight--3 {
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(98, 162, 255, 0.6), transparent 70%);
+    animation-delay: 4s;
+}
+
+@keyframes spotlightMove {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(20px, 30px) scale(1.1); }
+    66% { transform: translate(-15px, -20px) scale(0.9); }
 }
 
 .company-identity__content {
-    max-width: 960px;
-    padding: 5rem 1.75rem;
+    position: relative;
+    max-width: 1200px;
+    padding: 6rem 1.75rem;
+    z-index: 4;
+}
+
+.company-identity__led-display {
+    margin-bottom: 4rem;
 }
 
 .company-identity__eyebrow {
     display: block;
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     letter-spacing: 0.35em;
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .company-identity__title {
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    margin-bottom: 2rem;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    text-shadow: 
+        0 0 30px rgba(136, 70, 255, 0.6),
+        0 0 60px rgba(136, 70, 255, 0.4),
+        0 0 90px rgba(136, 70, 255, 0.2);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.1;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 
+            0 0 30px rgba(136, 70, 255, 0.6),
+            0 0 60px rgba(136, 70, 255, 0.4),
+            0 0 90px rgba(136, 70, 255, 0.2);
+    }
+    100% {
+        text-shadow: 
+            0 0 40px rgba(136, 70, 255, 0.8),
+            0 0 80px rgba(136, 70, 255, 0.6),
+            0 0 120px rgba(136, 70, 255, 0.4);
+    }
+}
+
+.company-identity__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.company-identity__logo-sphere {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sphereRotate 20s linear infinite;
+}
+
+.company-identity__logo-ring {
+    position: absolute;
+    border: 2px solid;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.company-identity__logo-ring--1 {
+    width: 80px;
+    height: 80px;
+    border-color: rgba(136, 70, 255, 0.9);
+    box-shadow: 
+        0 0 20px rgba(136, 70, 255, 0.6),
+        inset 0 0 20px rgba(136, 70, 255, 0.3);
+    animation: ringPulse1 3s ease-in-out infinite;
+}
+
+.company-identity__logo-ring--2 {
+    width: 100px;
+    height: 100px;
+    border-color: rgba(255, 71, 173, 0.8);
+    box-shadow: 
+        0 0 25px rgba(255, 71, 173, 0.5),
+        inset 0 0 25px rgba(255, 71, 173, 0.2);
+    animation: ringPulse2 3.5s ease-in-out infinite;
+}
+
+.company-identity__logo-ring--3 {
+    width: 120px;
+    height: 120px;
+    border-color: rgba(98, 162, 255, 0.7);
+    box-shadow: 
+        0 0 30px rgba(98, 162, 255, 0.4),
+        inset 0 0 30px rgba(98, 162, 255, 0.15);
+    animation: ringPulse3 4s ease-in-out infinite;
+}
+
+@keyframes sphereRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes ringPulse1 {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes ringPulse2 {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: scale(1.15);
+        opacity: 0.9;
+    }
+}
+
+@keyframes ringPulse3 {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
 }
 
 .company-identity__description {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 900px;
+    margin: 0 auto;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 767.98px) {
     .company-identity {
-        min-height: 65vh;
+        min-height: 75vh;
+    }
+
+    .company-identity__content {
+        padding: 4rem 1.5rem;
+    }
+
+    .company-identity__led-display {
+        margin-bottom: 3rem;
+    }
+
+    .company-identity__title {
+        margin-bottom: 2rem;
+    }
+
+    .company-identity__logo-sphere {
+        width: 100px;
+        height: 100px;
+    }
+
+    .company-identity__logo-ring--1 {
+        width: 65px;
+        height: 65px;
+    }
+
+    .company-identity__logo-ring--2 {
+        width: 85px;
+        height: 85px;
+    }
+
+    .company-identity__logo-ring--3 {
+        width: 100px;
+        height: 100px;
     }
 
     .company-identity__description {
-        font-size: 1.05rem;
+        font-size: 1rem;
+    }
+
+    .company-identity__spotlight {
+        width: 200px;
+        height: 200px;
+        filter: blur(60px);
     }
 }
 
@@ -605,8 +846,8 @@
     }
 
     .testimonial-cta-btn {
-        padding: 0.75rem 2rem;
-        font-size: 1rem;
+        padding: 0.625rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
 
