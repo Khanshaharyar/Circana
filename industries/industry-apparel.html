@@ -119,9 +119,17 @@
                     </button>
                     <div class="nav-actions d-flex align-items-center gap-2">
                         <a href="#" class="btn btn-contact">Contact Us</a>
-                        <button class="icon-btn" aria-label="Language/Region">
-                            <i class="bi bi-globe2"></i>
-                        </button>
+                        <div class="dropdown">
+                            <button class="icon-btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language/Region">
+                                <i class="bi bi-globe2"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="fr">Français</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="de">Deutsch</a></li>
+                            </ul>
+                        </div>
                         <button class="icon-btn" aria-label="Account">
                             <i class="bi bi-person-circle"></i>
                         </button>
@@ -194,7 +202,17 @@
                 </div>
             </nav>
             <div class="mobile-social">
-                <a href="#" class="icon-btn" aria-label="Language/Region"><i class="bi bi-globe2"></i></a>
+                <div class="dropdown">
+                    <button class="icon-btn dropdown-toggle" type="button" id="mobileLanguageDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language/Region">
+                        <i class="bi bi-globe2"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mobileLanguageDropdown">
+                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="fr">Français</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="de">Deutsch</a></li>
+                    </ul>
+                </div>
                 <a href="#" class="icon-btn" aria-label="Account"><i class="bi bi-person-circle"></i></a>
             </div>
             <a href="#" class="mobile-contact-us-btn">
