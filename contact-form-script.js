@@ -181,9 +181,9 @@ function initContactForm() {
             };
 
             // EmailJS configuration
-            const serviceId = 'service_e2w7kzo';
-            const templateId = 'template_7i4in4n';
-            const publicKey = 'CKYUSJWCHRXIC9j-E';
+            const serviceId = 'service_myzs429';
+            const templateId = 'template_h57exae';
+            const publicKey = 'KbXKK4dyHIEsgWYzQ';
             
             // Ensure EmailJS is initialized
             if (typeof emailjs === 'undefined') {
